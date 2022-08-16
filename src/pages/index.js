@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <div>oi</div>
+    <div>oi s</div>
   </Layout>
 )
 
