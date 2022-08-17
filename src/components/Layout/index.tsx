@@ -1,12 +1,12 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import GlobalStyles from "../styles/global"
+import GlobalStyles from "../../styles/global"
 
 const Layout = ({ children }) => {
   return (
     <>
+      <GlobalStyles />
       <main>{children}</main>
-      <GlobalStyles></GlobalStyles>
     </>
   )
 }
