@@ -9,6 +9,15 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // ssr: false
+        // displayName: false,
+        // minify: false
+        // see docs
+      },
+    },
+    {
       resolve: 'gatsby-source-prismic',
       options: {
         repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
