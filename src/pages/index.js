@@ -3,6 +3,7 @@ import { useStaticQuery, graphql} from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Header from "../components/Header"
 
 const IndexPage = () => {
   const teste1 = useStaticQuery(graphql`
@@ -23,6 +24,7 @@ console.log(alou)
 
   return(
   <Layout>
+    <Header></Header>
     <Seo title="Home" />
     <div>oi es</div>
   </Layout>
