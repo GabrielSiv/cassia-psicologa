@@ -1,25 +1,31 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: `Cassia Lacê Psicologa`,
     description: `A profissional Cassia Lacê realiza atendimentos de psicoterapia, nas modalidades presencial e online.`,
     author: `@gcassiapsicologa`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-prismic',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+        customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
+        schemas: {
+          my_deleted_schema: {}
+        }
+      }
     },
-    `gatsby-plugin-image`,
+    'gatsby-plugin-image',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-prismic',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+        customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
       },
     },
     `gatsby-transformer-sharp`,
