@@ -39,6 +39,12 @@ const Intro = () => {
             {IntroContent.data.sub_titulos[0].sub_titulo.text}
           </S.IntroSubtitle>
           <S.Separador />
+          <S.IntroLastContentWrapper>
+            <S.IntroCRP>
+              {IntroContent.data.sub_titulos[1].sub_titulo.text}
+            </S.IntroCRP>
+            <S.IntroNavButton href="/">AGENDAMENTO</S.IntroNavButton>
+          </S.IntroLastContentWrapper>
         </S.IntroContent>
       </S.IntroWrapper>
     </>
