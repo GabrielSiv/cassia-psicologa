@@ -10,7 +10,7 @@ const fontSizes: {
   "--font-size-xl": getRem(48),
   "--font-size-lg": getRem(32),
   "--font-size-md": getRem(24),
-  "--font-size-sm": getRem(18),
+  "--font-size-sm": getRem(20),
   "--font-size-xs": getRem(18),
   "--font-size-xxs": getRem(16),
   "--font-size-us": getRem(14),
