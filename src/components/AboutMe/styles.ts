@@ -3,19 +3,18 @@ import getVar from "../../utils/getVar"
 
 export const AboutMeWrapper = styled.section`
   width: 100%;
-  height: 857px;
 `
 export const AboutMeContentWrapper = styled.div`
   width: 1160px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `
 export const AboutMeTextWrapper = styled.div`
   width: 600px;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-top: 164px;
 `
 
 export const AboutMeSubTitle = styled.h2`
@@ -79,8 +78,5 @@ export const AboutMeNotoriousParagraph = styled.p`
   width: 112px;
 `
 
-export const AboutMeImageWrapper = styled.div`
-  width: 420px;
-  height: 857px;
-`
+export const AboutMeImageWrapper = styled.div``
 export const AboutMeImage = styled.img``

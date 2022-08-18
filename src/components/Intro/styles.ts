@@ -63,7 +63,7 @@ export const IntroNavButton = styled.a`
   justify-self: center;
   text-align: center;
   font-family: ${getVar("font-family-primary")};
-  font-size: ${getVar("font-size-sm")};
+  font-size: ${getVar("font-size-xs")};
   color: ${getVar("color-white-00")};
   padding-top: 15px;
   width: 195px;

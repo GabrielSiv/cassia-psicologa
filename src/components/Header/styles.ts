@@ -3,7 +3,7 @@ import getVar from "../../utils/getVar"
 
 export const headerWrapper = styled.nav`
   position: absolute;
-  height: 100px;
+  height: 70px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -23,7 +23,7 @@ export const headerLink = styled.li`
   a {
     display: flex;
     font-family: ${getVar("font-family-primary")};
-    font-size: ${getVar("font-size-sm")};
+    font-size: ${getVar("font-size-xs")};
     color: ${getVar("color-white-00")};
     font-weight: ${getVar("font-weight-regular")};
   }
