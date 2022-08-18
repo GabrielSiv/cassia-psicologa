@@ -23,7 +23,7 @@ export const headerLink = styled.li`
   a {
     display: flex;
     font-family: ${getVar("font-family-primary")};
-    font-size: ${getVar("font-size-md")};
+    font-size: ${getVar("font-size-sm")};
     color: ${getVar("color-white-00")};
     font-weight: ${getVar("font-weight-regular")};
   }

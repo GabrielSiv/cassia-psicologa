@@ -10,9 +10,6 @@ const Header = () => {
     { name: "SERVIÇOS", href: "/servicos" },
   ]
 
-  headerLinks.forEach((item: HeaderLinksProps, index: number) => {
-    console.log(item.name)
-  })
   return (
     <>
       <S.headerWrapper>

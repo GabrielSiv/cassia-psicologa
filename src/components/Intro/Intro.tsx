@@ -26,7 +26,6 @@ const Intro = () => {
   `)
 
   const IntroContent: IntroQueryProps = IntroQuery.prismicHead
-  console.log(IntroContent.data.sub_titulos[1].sub_titulo.text)
 
   return (
     <>
