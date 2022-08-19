@@ -33,8 +33,8 @@ const AboutMe = () => {
       }
     }
   `)
-  const AboutMeContent: AboutMeQueryProps = AboutMeQuery.prismicSobreMim
-  const TrabalhosNotorios: Array<TrabalhosNotoriosProps> =
+  const aboutMeContent: AboutMeQueryProps = AboutMeQuery.prismicSobreMim
+  const trabalhosNotorios: Array<TrabalhosNotoriosProps> =
     AboutMeQuery.prismicSobreMim.data.trabalhos_notorios
 
   return (
@@ -42,30 +42,32 @@ const AboutMe = () => {
       <S.AboutMeWrapper>
         <S.AboutMeContentWrapper>
           <S.AboutMeTextWrapper>
-            <S.AboutMeTitle>{AboutMeContent.data.titulo.text}</S.AboutMeTitle>
+            <S.AboutMeTitle>{aboutMeContent.data.titulo.text}</S.AboutMeTitle>
             <S.AboutMeSubTitle>
-              {AboutMeContent.data.sub_titulo.text}
+              {aboutMeContent.data.sub_titulo.text}
             </S.AboutMeSubTitle>
             <S.AboutMeParagraph>
-              {AboutMeContent.data.sobre_mim.text}
+              {aboutMeContent.data.sobre_mim.text}
             </S.AboutMeParagraph>
             <S.AboutMeNotoriousWrapper>
-              {TrabalhosNotorios.map((item: TrabalhosNotoriosProps) => {
-                return (
-                  <S.AboutMeNotoriousItem>
-                    <S.AboutMeNotoriousTitle>
-                      {item.trabalhos_notorios_titulo.text}
-                    </S.AboutMeNotoriousTitle>
-                    <S.AboutMeNotoriousParagraph>
-                      {item.trabalhos_notorios_descricao.text}
-                    </S.AboutMeNotoriousParagraph>
-                  </S.AboutMeNotoriousItem>
-                )
-              })}
+              {trabalhosNotorios.map(
+                (item: TrabalhosNotoriosProps, index: number) => {
+                  return (
+                    <S.AboutMeNotoriousItem key={index}>
+                      <S.AboutMeNotoriousTitle>
+                        {item.trabalhos_notorios_titulo.text}
+                      </S.AboutMeNotoriousTitle>
+                      <S.AboutMeNotoriousParagraph>
+                        {item.trabalhos_notorios_descricao.text}
+                      </S.AboutMeNotoriousParagraph>
+                    </S.AboutMeNotoriousItem>
+                  )
+                }
+              )}
             </S.AboutMeNotoriousWrapper>
           </S.AboutMeTextWrapper>
           <S.AboutMeImageWrapper>
-            <S.AboutMeImage src={`${AboutMeContent.data.sobre_mim_foto.url}`} />
+            <S.AboutMeImage src={`${aboutMeContent.data.sobre_mim_foto.url}`} />
           </S.AboutMeImageWrapper>
         </S.AboutMeContentWrapper>
       </S.AboutMeWrapper>
