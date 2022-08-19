@@ -78,5 +78,13 @@ export const AboutMeNotoriousParagraph = styled.p`
   width: 112px;
 `
 
-export const AboutMeImageWrapper = styled.div``
-export const AboutMeImage = styled.img``
+export const AboutMeImageWrapper = styled.div`
+  height: 857px;
+  width: 420px;
+`
+export const AboutMeImage = styled.img`
+  height: 857px;
+  width: 420px;
+  object-fit: cover;
+  object-position: center;
+`
