@@ -1,14 +1,24 @@
+import React from "react"
 export default function useIsMobile() {
-  function displayCheck() {
-    var check = false
-    if (window.screen.width < 1024) {
-      check = true
+  function getWindowSize() {
+    const { innerWidth, innerHeight } = window
+    const innerWidthBool = innerWidth > 1024 ? true : false
+    return { innerWidthBool, innerHeight }
+  }
+  const [windowSize, setWindowSize] = React.useState(getWindowSize())
+
+  React.useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize())
     }
 
-    return check
-  }
+    window.addEventListener("resize", handleWindowResize)
 
-  const display = displayCheck()
+    return () => {
+      window.removeEventListener("resize", handleWindowResize)
+    }
+  }, [])
 
-  return { display }
+  let widthBool = windowSize.innerWidthBool
+  return { widthBool }
 }

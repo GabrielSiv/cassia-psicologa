@@ -40,7 +40,7 @@ const AboutMe = () => {
 
   const isMobile = useIsMobile()
 
-  return !isMobile ? (
+  return isMobile.widthBool ? (
     <>
       <S.AboutMeWrapper>
         <S.AboutMeContentWrapper>
