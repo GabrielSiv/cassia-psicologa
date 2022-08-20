@@ -4,9 +4,7 @@ const fontSizes: {
   [key: string]: string | 0
 } = {
   "--font-size-uul": getRem(96),
-  "--font-size-ul": getRem(48),
-  "--font-size-xxxl": getRem(48),
-  "--font-size-xxl": getRem(48),
+  "--font-size-xxl": getRem(64),
   "--font-size-xl": getRem(48),
   "--font-size-lg": getRem(32),
   "--font-size-md": getRem(24),
