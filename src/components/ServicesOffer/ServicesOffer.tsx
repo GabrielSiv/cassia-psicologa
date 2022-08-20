@@ -35,6 +35,7 @@ const ServicesOffer = () => {
     ServicosQuery.prismicServicoPrestado
   const servicosList: Array<ServicosPrestadosProps> =
     ServicosQuery.prismicServicoPrestado.data.servicos
+  console.log(window.screen.width)
 
   return (
     <>

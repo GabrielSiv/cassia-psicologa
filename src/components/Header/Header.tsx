@@ -1,6 +1,7 @@
 import React from "react"
 import * as S from "./styles"
 import type { HeaderLinksProps } from "./interfaces"
+import Logo from "../Logo"
 
 const Header = () => {
   const headerLinks: Array<HeaderLinksProps> = [
@@ -12,22 +13,25 @@ const Header = () => {
 
   return (
     <>
-      <S.headerWrapper>
-        <S.headerLinks>
+      <S.HeaderWrapper>
+        <S.HeaderLinks>
           {headerLinks.map((item: HeaderLinksProps, index: number) => {
             return (
               <React.Fragment key={index}>
-                <S.headerLink>
+                <S.HeaderLink>
                   <a href={`${item.href}`}>{item.name}</a>
-                </S.headerLink>
+                </S.HeaderLink>
                 {index < headerLinks.length - 1 ? (
                   <span style={{ color: "white" }}>|</span>
                 ) : null}
               </React.Fragment>
             )
           })}
-        </S.headerLinks>
-      </S.headerWrapper>
+        </S.HeaderLinks>
+        <S.HeaderLinkMobile>
+          <Logo width="57px" height="25px"></Logo>
+        </S.HeaderLinkMobile>
+      </S.HeaderWrapper>
     </>
   )
 }
