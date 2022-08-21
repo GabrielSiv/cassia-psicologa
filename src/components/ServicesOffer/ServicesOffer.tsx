@@ -35,7 +35,6 @@ const ServicesOffer = () => {
     ServicosQuery.prismicServicoPrestado
   const servicosList: Array<ServicosPrestadosProps> =
     ServicosQuery.prismicServicoPrestado.data.servicos
-  console.log(window.screen.width)
 
   return (
     <>
@@ -59,6 +58,7 @@ const ServicesOffer = () => {
                   </S.ServiceTitleWrapper>
                   <S.ServiceImageWrapper>
                     <S.ServiceImage
+                      alt="Services"
                       src={`${item.servico_image.url}`}
                     ></S.ServiceImage>
                   </S.ServiceImageWrapper>

@@ -38,31 +38,36 @@ const DropDownMenu = () => {
   return (
     <>
       <S.DropDownWrapper ref={display}>
-        <S.DropDownImg
-          src={Teste}
-          onClick={() => {
-            handleClick()
-          }}
-        />
-        <S.DropDownMenuMain ref={wrapperRef} className="dropdown-main-menu">
-          {headerLinks.map((item: HeaderLinksProps, index: number) => {
-            return (
-              <React.Fragment key={index}>
-                <S.ItemMenu>
-                  <a
-                    href={`${item.href}`}
-                    onClick={e => {
-                      e.preventDefault()
-                      scrollTo(`#${item.name}`)
-                    }}
-                  >
-                    {item.name.toLocaleLowerCase()}
-                  </a>
-                </S.ItemMenu>
-              </React.Fragment>
-            )
-          })}
-        </S.DropDownMenuMain>
+        <li>
+          <S.DropDownImg
+            alt="Drop Down Menu"
+            src={Teste}
+            onClick={() => {
+              handleClick()
+            }}
+          />
+        </li>
+        <li>
+          <S.DropDownMenuMain ref={wrapperRef} className="dropdown-main-menu">
+            {headerLinks.map((item: HeaderLinksProps, index: number) => {
+              return (
+                <React.Fragment key={index}>
+                  <S.ItemMenu>
+                    <a
+                      href={`${item.href}`}
+                      onClick={e => {
+                        e.preventDefault()
+                        scrollTo(`#${item.name}`)
+                      }}
+                    >
+                      {item.name.toLocaleLowerCase()}
+                    </a>
+                  </S.ItemMenu>
+                </React.Fragment>
+              )
+            })}
+          </S.DropDownMenuMain>
+        </li>
       </S.DropDownWrapper>
     </>
   )

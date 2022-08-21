@@ -111,7 +111,7 @@ export const ContatoLocalizacaoItemText = styled.p`
   font-family: ${getVar("font-family-primary")};
   font-size: ${getVar("font-size-xxs")};
   text-decoration: none;
-  color: ${getVar("color-red-09")};
+  color: ${getVar("color-red-10")};
   font-weight: ${getVar("font-weight-bold")};
   align-self: center;
   margin-left: 16px;
@@ -145,7 +145,7 @@ export const MaisInformacoesText = styled.p`
   font-family: ${getVar("font-family-primary")};
   font-size: ${getVar("font-size-xxs")};
   line-height: ${getVar("line-height-sm")};
-  color: ${getVar("color-red-09")};
+  color: ${getVar("color-red-10")};
   width: 250px;
   margin-top: 24px;
 `

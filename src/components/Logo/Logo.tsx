@@ -22,6 +22,7 @@ const Logo: React.FC<LogoSizesProps> = ({ width, height }) => {
       <S.Logo
         height={height}
         width={width}
+        alt={"Logo Cassia"}
         src={LogoQueryContent.data.logo.url}
       />
     </>
