@@ -46,7 +46,7 @@ export const IntroMainTitle = styled.h1`
 
 export const IntroSubtitle = styled.h2`
   display: block;
-  font-family: ${getVar("font-family-primary")};
+  font-family: ${getVar("font-family-secondary")};
   font-size: ${getVar("font-size-xl")};
   color: ${getVar("color-white-00")};
   line-height: ${getVar("line-height-xl")};

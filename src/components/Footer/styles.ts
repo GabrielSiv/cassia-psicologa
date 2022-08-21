@@ -4,7 +4,7 @@ import getVar from "../../utils/getVar"
 export const ContatoWrapper = styled.div`
   padding-top: 64px;
   width: 100%;
-  background-color: ${getVar("color-red-02")};
+  background-color: ${getVar("color-red-01")};
   @media (min-width: 641px) and (max-width: 1024px) {
     padding-top: 84px;
   }
