@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import getVar from "../../utils/getVar"
 
-export const HeaderWrapper = styled.nav`
+export const HeaderWrapper = styled.header`
   position: absolute;
   height: 70px;
   width: 100%;
@@ -12,6 +12,7 @@ export const HeaderWrapper = styled.nav`
   z-index: 10;
   @media screen and (max-width: 1024px) {
     height: 44px;
+    justify-content: center;
   }
 `
 
@@ -20,7 +21,9 @@ export const HeaderLinks = styled.ul`
   align-items: center;
   justify-content: space-between;
   height: 70px;
-  width: 1160px;
+  width: 1024px;
+  padding-left: 10px;
+  padding-right: 10px;
   @media screen and (max-width: 1024px) {
     display: none;
   }
@@ -34,13 +37,29 @@ export const HeaderLink = styled.li`
     font-weight: ${getVar("font-weight-regular")};
   }
 `
+export const HeaderMobileWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  @media (max-width: 640px) {
+    width: 320px;
+  }
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: 640px;
+  }
+`
 export const HeaderLinkMobile = styled.div`
   display: none;
-  @media screen and (max-width: 1024px) {
+  @media (max-width: 640px) {
     display: flex;
-    width: 100%;
+    width: 195px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media (min-width: 641px) and (max-width: 1024px) {
+    display: flex;
+    width: 355px;
     height: 44px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 `

@@ -21,7 +21,7 @@ export const ServicesOfferWrapper = styled.div`
 
 export const ServicesOfferContent = styled.div`
   margin: 0 auto;
-  width: 1160px;
+  width: 1024px;
   @media screen and (max-width: 640px) {
     width: 320px;
   }
@@ -77,7 +77,7 @@ export const ServiceItemsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 1160px;
+  width: 1024px;
   @media screen and (max-width: 640px) {
     width: 320px;
     justify-content: center;
@@ -88,7 +88,7 @@ export const ServiceItemsWrapper = styled.div`
   }
 `
 export const ServiceWrapper = styled.div`
-  width: 560px;
+  width: 500px;
   height: 360px;
   border: 2px solid ${getVar("color-red-10")};
   @media screen and (max-width: 640px) {
@@ -104,7 +104,7 @@ export const ServiceWrapper = styled.div`
 `
 export const ServiceTitleWrapper = styled.div`
   display: flex;
-  width: 558px;
+  width: 498px;
   height: 73px;
   background-color: ${getVar("color-red-10")};
   align-items: center;
@@ -130,7 +130,7 @@ export const ServiceTitle = styled.h3`
 `
 export const ServiceImageWrapper = styled.div`
   height: 285px;
-  width: 556px;
+  width: 496px;
   @media screen and (max-width: 640px) {
     width: 317px;
     height: 162px;
@@ -142,7 +142,7 @@ export const ServiceImageWrapper = styled.div`
 `
 export const ServiceImage = styled.img`
   height: 283px;
-  width: 556px;
+  width: 496px;
   object-fit: cover;
   object-position: center;
   @media screen and (max-width: 640px) {

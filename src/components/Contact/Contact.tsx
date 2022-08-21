@@ -38,7 +38,7 @@ const Contact = () => {
 
   return (
     <>
-      <S.ContactWrapper>
+      <S.ContactWrapper id="CONTATO">
         <S.ContactTitle>
           {contactContent.data.contato_main_title.text}
         </S.ContactTitle>

@@ -39,7 +39,7 @@ const ServicesOffer = () => {
 
   return (
     <>
-      <S.ServicesOfferWrapper>
+      <S.ServicesOfferWrapper id="SERVIÇOS">
         <S.ServicesOfferContent>
           <S.ServicesOfferTitle>
             {servicosContent.data.titulo.text}

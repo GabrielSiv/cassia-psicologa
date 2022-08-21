@@ -1,5 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import scrollTo from "gatsby-plugin-smoothscroll"
+
 import { IntroQueryProps } from "./interfaces"
 
 import * as S from "./styles"
@@ -29,7 +31,7 @@ const Intro = () => {
 
   return (
     <>
-      <S.IntroWrapper>
+      <S.IntroWrapper id="INICIO">
         <S.IntroContent href={IntroContent.data.head_bg.url}>
           <S.IntroMainTitle>
             {IntroContent.data.titulo_principal.text}
@@ -42,7 +44,15 @@ const Intro = () => {
             <S.IntroCRP>
               {IntroContent.data.sub_titulos[1].sub_titulo.text}
             </S.IntroCRP>
-            <S.IntroNavButton href="/">AGENDAMENTO</S.IntroNavButton>
+            <S.IntroNavButton
+              href=""
+              onClick={e => {
+                e.preventDefault()
+                scrollTo("#CONTATO")
+              }}
+            >
+              AGENDAMENTO
+            </S.IntroNavButton>
           </S.IntroLastContentWrapper>
         </S.IntroContent>
       </S.IntroWrapper>

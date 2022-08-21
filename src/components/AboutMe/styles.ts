@@ -9,7 +9,7 @@ export const AboutMeWrapper = styled.section`
   width: 100%;
 `
 export const AboutMeContentWrapper = styled.div`
-  width: 1160px;
+  width: 1024px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -66,6 +66,7 @@ export const AboutMeParagraph = styled.p`
   font-size: ${getVar("font-size-xxs")};
   line-height: ${getVar("line-height-sm")};
   color: ${getVar("color-red-10")};
+  width: 560px;
   @media (max-width: 640px) {
     width: 315px;
     margin: 40px auto 30px auto;
@@ -76,9 +77,9 @@ export const AboutMeParagraph = styled.p`
   }
 `
 export const AboutMeNotoriousWrapper = styled.div`
-  width: 600px;
+  width: 550px;
   height: 100px;
-  margin: 67px auto 0 auto;
+  margin: 67px 0 0 0;
   display: flex;
   @media (max-width: 640px) {
     justify-content: space-between;

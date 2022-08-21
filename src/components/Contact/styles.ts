@@ -59,6 +59,8 @@ export const SocialMediaTitleWrapper = styled.div`
   @media (min-width: 641px) and (max-width: 1024px) {
     width: 597px;
     height: 84px;
+    margin-left: -1px;
+    margin-top: -1px;
   }
 `
 export const SocialMediaTitle = styled.h1`
