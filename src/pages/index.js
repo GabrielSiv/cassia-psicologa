@@ -12,7 +12,7 @@ import Footer from "../components/Footer"
 const IndexPage = () => {
   return(
   <Layout>
-    <Seo title="a" />
+    <Seo title="" />
     <Header></Header>
     <Intro></Intro>
     <AboutMe></AboutMe>
