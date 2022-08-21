@@ -7,6 +7,7 @@ import Intro from "../components/Intro"
 import AboutMe from "../components/AboutMe"
 import ServicesOffer from "../components/ServicesOffer"
 import Contact from "../components/Contact"
+import Footer from "../components/Footer"
 
 const IndexPage = () => {
   return(
@@ -17,6 +18,7 @@ const IndexPage = () => {
     <AboutMe></AboutMe>
     <ServicesOffer></ServicesOffer>
     <Contact></Contact>
+    <Footer></Footer>
 
   </Layout>
 )

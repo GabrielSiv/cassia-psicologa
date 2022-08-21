@@ -42,7 +42,7 @@ const AboutMe = () => {
 
   return isMobile.widthBool ? (
     <>
-      <S.AboutMeWrapper>
+      <S.AboutMeWrapper id="SOBRE">
         <S.AboutMeContentWrapper>
           <S.AboutMeTextWrapper>
             <S.AboutMeTitle>{aboutMeContent.data.titulo.text}</S.AboutMeTitle>

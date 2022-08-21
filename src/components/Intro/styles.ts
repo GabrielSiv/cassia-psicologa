@@ -67,9 +67,10 @@ export const IntroSubtitle = styled.h2`
   }
 `
 export const Separador = styled.div`
-  width: 0px;
+  width: 1px;
   height: 81px;
   border-radius: 20px;
+  background-color: ${getVar("color-white-00")};
   border: 1px solid ${getVar("color-white-00")};
   margin: 56px auto;
   @media screen and (max-width: 640px) {
@@ -86,7 +87,7 @@ export const IntroLastContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 auto;
-  width: 1160px;
+  width: 1024px;
   @media screen and (max-width: 1024px) {
     display: flex;
     justify-content: center;

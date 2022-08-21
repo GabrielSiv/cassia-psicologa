@@ -1,7 +1,10 @@
 import React from "react"
+import scrollTo from "gatsby-plugin-smoothscroll"
+
 import * as S from "./styles"
 import type { HeaderLinksProps } from "./interfaces"
 import Logo from "../Logo"
+import DropDownMenu from "../DropDownMenu"
 
 const Header = () => {
   const headerLinks: Array<HeaderLinksProps> = [
@@ -19,7 +22,15 @@ const Header = () => {
             return (
               <React.Fragment key={index}>
                 <S.HeaderLink>
-                  <a href={`${item.href}`}>{item.name}</a>
+                  <a
+                    href={`${item.href}`}
+                    onClick={e => {
+                      e.preventDefault()
+                      scrollTo(`#${item.name}`)
+                    }}
+                  >
+                    {item.name}
+                  </a>
                 </S.HeaderLink>
                 {index < headerLinks.length - 1 ? (
                   <span style={{ color: "white" }}>|</span>
@@ -28,9 +39,12 @@ const Header = () => {
             )
           })}
         </S.HeaderLinks>
-        <S.HeaderLinkMobile>
-          <Logo width="57px" height="25px"></Logo>
-        </S.HeaderLinkMobile>
+        <S.HeaderMobileWrapper>
+          <S.HeaderLinkMobile>
+            <Logo width="57px" height="25px"></Logo>
+            <DropDownMenu></DropDownMenu>
+          </S.HeaderLinkMobile>
+        </S.HeaderMobileWrapper>
       </S.HeaderWrapper>
     </>
   )
