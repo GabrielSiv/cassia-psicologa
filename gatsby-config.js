@@ -8,6 +8,7 @@ module.exports = {
     author: `@cassiapsicologa`,
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-source-filesystem`,
       options:{
