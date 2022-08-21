@@ -57,6 +57,7 @@ const Footer = () => {
                     <S.ContatoLocalizacaoLink href={item.link_contato.url}>
                       <S.ContatoLocalizacaoItemImg
                         src={item.icone_contato.url}
+                        alt={"Contact"}
                       />
                       <S.ContatoLocalizacaoItemText>
                         {item.texto_contato.text}

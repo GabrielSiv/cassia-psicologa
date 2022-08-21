@@ -25,8 +25,8 @@ export const DropDownWrapper = styled.ul`
   }
 `
 export const DropDownImg = styled.img`
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 17px;
 `
 export const DropDownMenuMain = styled.ul`
   position: absolute;

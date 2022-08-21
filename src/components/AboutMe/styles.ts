@@ -14,6 +14,9 @@ export const AboutMeContentWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `
 export const AboutMeTextWrapper = styled.div`
   width: 600px;
@@ -133,7 +136,7 @@ export const AboutMeNotoriousParagraph = styled.p`
   font-family: ${getVar("font-family-primary")};
   font-size: ${getVar("font-size-sm")};
   line-height: ${getVar("line-height-sm")};
-  color: ${getVar("color-red-08")};
+  color: ${getVar("color-red-09")};
   font-weight: ${getVar("font-weight-bold")};
   margin-top: 16px;
   width: 112px;
@@ -155,7 +158,13 @@ export const AboutMeImage = styled.img`
   object-position: center;
 `
 
-///Mobile
+export const AboutMeMobileWrapper = styled.div`
+  display: none;
+  width: 100%;
+  @media (max-width: 1024px) {
+    display: block;
+  }
+`
 
 export const AboutMeFirst = styled.div`
   display: flex;
@@ -172,20 +181,22 @@ export const AboutMeFirst = styled.div`
   }
 `
 export const AboutMeImageWrapperMob = styled.div`
-  width: auto;
+  width: 108px;
   height: 220px;
   margin-right: 50px;
   @media (min-width: 641px) and (max-width: 1024px) {
     height: 360px;
+    width: 176px;
   }
 `
 export const AboutMeImageMob = styled.img`
-  width: auto;
+  width: 108px;
   height: 220px;
   object-fit: cover;
   object-position: center;
   @media (min-width: 641px) and (max-width: 1024px) {
     height: 360px;
+    width: 176px;
   }
 `
 export const AboutMeFirstTextWrapper = styled.div`

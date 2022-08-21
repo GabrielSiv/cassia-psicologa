@@ -6,7 +6,7 @@ export const ServicesOfferWrapper = styled.div`
   padding-top: 164px;
   padding-bottom: 164px;
   justify-content: center;
-  background-color: ${getVar("color-red-02")};
+  background-color: ${getVar("color-red-01")};
   @media screen and (max-width: 640px) {
     padding-top: 64px;
     padding-bottom: 64px;
@@ -55,7 +55,7 @@ export const ServicesOfferParagraph = styled.p`
     width: 100%;
   }
 `
-export const ServicesListTitle = styled.h3`
+export const ServicesListTitle = styled.h2`
   margin: 53px 0;
   font-family: ${getVar("font-family-secondary")};
   font-size: ${getVar("font-size-md")};

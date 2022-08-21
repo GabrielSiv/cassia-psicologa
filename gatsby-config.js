@@ -3,9 +3,9 @@ require('dotenv').config({
 })
 module.exports = {
   siteMetadata: {
-    title: `Cassia Lacê Psicologa`,
+    title: `Cassia Lace Psicologa`,
     description: `A profissional Cassia Lacê realiza atendimentos de psicoterapia, nas modalidades presencial e online.`,
-    author: `@gcassiapsicologa`,
+    author: `@cassiapsicologa`,
   },
   plugins: [
     {

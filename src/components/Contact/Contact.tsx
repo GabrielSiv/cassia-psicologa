@@ -53,14 +53,16 @@ const Contact = () => {
           </S.SocialMediaParagraph>
           <S.SocialMediaItemsWrapper>
             {socialMediaContent.map((item: SocialMediaProps, index: number) => {
-              console.log(item.social_media_link.text)
               return (
                 <S.SocialMediaItem key={index}>
                   <S.SocialMediaItemLink
                     href={`https://${item.social_media_link.text}`}
                     target="__blank"
                   >
-                    <S.SocialMediaItemImg src={item.social_media_icon.url} />
+                    <S.SocialMediaItemImg
+                      src={item.social_media_icon.url}
+                      alt={"Contact"}
+                    />
 
                     <S.SocialMediaItemName>
                       {item.social_media_name.text}
