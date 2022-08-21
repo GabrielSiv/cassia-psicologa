@@ -103,7 +103,7 @@ export const SocialMediaItemsWrapper = styled.ul`
 `
 export const SocialMediaItem = styled.li`
   width: 150px;
-  height: 32px;
+  height: 45px;
   &:not(:last-child) {
     margin-bottom: 24px;
   }
