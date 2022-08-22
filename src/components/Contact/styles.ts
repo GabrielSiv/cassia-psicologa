@@ -53,9 +53,10 @@ export const SocialMediaTitleWrapper = styled.div`
   justify-content: center;
   align-items: center;
   @media (max-width: 640px) {
-    width: 317px;
+    width: 318px;
     height: 61px;
     margin-top: -1px;
+    margin-left: -1px;
   }
   @media (min-width: 641px) and (max-width: 1024px) {
     width: 597px;
@@ -108,7 +109,7 @@ export const SocialMediaItem = styled.li`
   width: 150px;
   height: 45px;
   &:not(:last-child) {
-    margin-bottom: 24px;
+    margin-bottom: 36px;
   }
   @media (max-width: 640px) {
     height: 32px;

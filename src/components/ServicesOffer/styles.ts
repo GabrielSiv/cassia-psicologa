@@ -108,10 +108,11 @@ export const ServiceTitleWrapper = styled.div`
   height: 73px;
   background-color: ${getVar("color-red-10")};
   align-items: center;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 640px) {
     width: 318px;
     height: 41px;
     margin-top: -1px;
+    margin-left: -1px;
   }
   @media (min-width: 641px) and (max-width: 1024px) {
     width: 278px;
@@ -132,12 +133,16 @@ export const ServiceImageWrapper = styled.div`
   height: 285px;
   width: 496px;
   @media screen and (max-width: 640px) {
-    width: 317px;
-    height: 162px;
+    width: 318px;
+    height: 164px;
+    margin-top: -1px;
+    margin-left: -1px;
   }
   @media (min-width: 641px) and (max-width: 1024px) {
-    width: 280px;
-    height: 162px;
+    width: 281px;
+    height: 163px;
+    margin-top: -1px;
+    margin-left: -1px;
   }
 `
 export const ServiceImage = styled.img`
@@ -146,13 +151,13 @@ export const ServiceImage = styled.img`
   object-fit: cover;
   object-position: center;
   @media screen and (max-width: 640px) {
-    width: 317px;
-    height: 162px;
+    width: 318px;
+    height: 163px;
 
     padding-bottom: 0.5px;
   }
   @media (min-width: 641px) and (max-width: 1024px) {
-    width: 276px;
-    height: 135px;
+    width: 277px;
+    height: 136px;
   }
 `
