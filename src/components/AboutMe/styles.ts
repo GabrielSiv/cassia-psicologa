@@ -203,7 +203,7 @@ export const AboutMeImageMob = styled.img`
   }
 `
 export const AboutMeFirstTextWrapper = styled.div`
-  padding-top: 78px;
+  padding-top: 76px;
   width: 160px;
   @media (min-width: 641px) and (max-width: 1024px) {
     width: 360px;

@@ -29,6 +29,7 @@ export const ContatoMainWrapper = styled.div`
 export const ContatoLocalizacaoWrapper = styled.nav`
   width: 350px;
   display: flex;
+  height: auto;
   flex-wrap: wrap;
   justify-content: flex-start;
   @media (max-width: 640px) {
@@ -53,7 +54,7 @@ export const ContatoLocalizacaoTitle = styled.h3`
 export const ContatoMaisInformacoesSeperador = styled.div`
   background-color: ${getVar("color-red-10")};
   width: 2px;
-  height: 200px;
+  height: auto;
   @media (max-width: 640px) {
     display: none;
   }
@@ -87,7 +88,7 @@ export const ContatoLocalizacaoItemList = styled.ul`
 export const ContatoLocalizacaoItem = styled.li`
   width: 410px;
   height: 29px;
-  margin-top: 12px;
+  margin-top: 20px;
   display: flex;
   justify-content: flex-start;
   align-content: center;

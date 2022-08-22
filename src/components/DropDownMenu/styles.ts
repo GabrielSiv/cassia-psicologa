@@ -39,7 +39,7 @@ export const DropDownImg = styled.img`
 `
 export const DropDownMenuMain = styled.ul`
   position: absolute;
-  top: 40px;
+  top: 44px;
   right: 0px;
 
   background: ${getVar("color-white-00")};
@@ -60,9 +60,9 @@ export const DropDownMenuMain = styled.ul`
   }
 `
 export const ItemMenu = styled.li`
-  :not(:last-child) {
-    margin-bottom: 8px;
-  }
+  padding-top: 6px;
+  padding-bottom: 6px;
+
   a {
     text-decoration: none;
     color: ${getVar("color-red-10")};
