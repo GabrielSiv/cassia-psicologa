@@ -103,7 +103,7 @@ export const AboutMeNotoriousItem = styled.div`
   overflow: hidden;
   justify-content: flex-start;
   &:not(:first-child) {
-    margin-left: 31px;
+    margin-left: 20px;
   }
   &:not(:last-child) {
     border-right: 2px solid ${getVar("color-red-01")};
