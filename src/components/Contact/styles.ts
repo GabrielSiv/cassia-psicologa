@@ -55,6 +55,7 @@ export const SocialMediaTitleWrapper = styled.div`
   @media (max-width: 640px) {
     width: 317px;
     height: 61px;
+    margin-top: -1px;
   }
   @media (min-width: 641px) and (max-width: 1024px) {
     width: 597px;

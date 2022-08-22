@@ -10,11 +10,11 @@ export const IntroWrapper = styled.div`
   height: 1002px;
   @media screen and (max-width: 640px) {
     width: 100%;
-    height: 400px;
+    height: 460px;
   }
   @media (min-width: 641px) and (max-width: 1024px) {
     width: 100%;
-    height: 510px;
+    height: 580px;
   }
 `
 export const IntroContent = styled.div<IntroProps>`
@@ -36,7 +36,7 @@ export const IntroMainTitle = styled.h1`
 
   @media screen and (max-width: 640px) {
     font-size: ${getVar("font-size-xl")};
-    margin: 82px auto 20px auto;
+    margin: 128px auto 20px auto;
   }
   @media (min-width: 641px) and (max-width: 1024px) {
     font-size: ${getVar("font-size-xxl")};

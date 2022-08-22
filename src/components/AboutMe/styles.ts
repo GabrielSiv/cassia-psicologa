@@ -81,19 +81,18 @@ export const AboutMeParagraph = styled.p`
 `
 export const AboutMeNotoriousWrapper = styled.div`
   width: 550px;
-  height: 100px;
+  height: auto;
   margin: 67px 0 0 0;
   display: flex;
+  flex-wrap: wrap;
   @media (max-width: 640px) {
-    justify-content: space-between;
     width: 320px;
-    height: 91px;
+    height: auto;
     margin: 0 auto;
   }
   @media (min-width: 641px) and (max-width: 1024px) {
-    justify-content: space-between;
     width: 600px;
-    height: 91px;
+    height: auto;
     margin: 0 auto;
   }
 `
@@ -102,17 +101,20 @@ export const AboutMeNotoriousItem = styled.div`
   height: 95px;
   overflow: hidden;
   justify-content: flex-start;
-  &:not(:first-child) {
-    margin-left: 20px;
-  }
+  margin-top: 4px;
+
+  border-right: 2px solid ${getVar("color-red-01")};
   &:not(:last-child) {
-    border-right: 2px solid ${getVar("color-red-01")};
+    margin-right: 8px;
+  }
+  @media (min-width: 641px) and (max-width: 1024px) {
+    &:not(:nth-child(odd)) {
+      margin-left: 12px;
+    }
   }
   @media (max-width: 1024px) {
     height: 91px;
-    &:not(:first-child) {
-      margin-left: 13px;
-    }
+    margin-left: 12px;
   }
 `
 export const AboutMeNotoriousTitle = styled.h3`
@@ -124,6 +126,7 @@ export const AboutMeNotoriousTitle = styled.h3`
   &::first-letter {
     font-size: ${getVar("font-size-md")};
   }
+
   @media (max-width: 1024px) {
     font-size: ${getVar("font-size-xxs")};
     &::first-letter {
@@ -143,7 +146,7 @@ export const AboutMeNotoriousParagraph = styled.p`
   @media (max-width: 1024px) {
     font-size: ${getVar("font-size-xus")};
     line-height: ${getVar("line-height-xxs")};
-    width: 67px;
+    width: 75px;
   }
 `
 
@@ -200,7 +203,7 @@ export const AboutMeImageMob = styled.img`
   }
 `
 export const AboutMeFirstTextWrapper = styled.div`
-  padding-top: 75px;
+  padding-top: 78px;
   width: 160px;
   @media (min-width: 641px) and (max-width: 1024px) {
     width: 360px;

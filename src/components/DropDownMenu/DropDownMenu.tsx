@@ -29,20 +29,23 @@ const DropDownMenu = () => {
   }
 
   function handleClick() {
-    display.current.className.includes("active")
-      ? display.current.classList.remove("active")
-      : display.current.classList.add("active")
+    if (display.current.className.includes("active")) {
+      display.current.classList.remove("active")
+      return
+    }
+    display.current.classList.add("active")
   }
 
-  useOutsideAlerter(wrapperRef)
+  useOutsideAlerter(display)
   return (
     <>
       <S.DropDownWrapper ref={display}>
         <li>
           <S.DropDownImg
+            className="menuIcon"
             alt="Drop Down Menu"
             src={Teste}
-            onClick={() => {
+            onMouseDown={() => {
               handleClick()
             }}
           />

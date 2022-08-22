@@ -93,9 +93,11 @@ export const ContatoLocalizacaoItem = styled.li`
   align-content: center;
   @media (max-width: 640px) {
     width: 268px;
+    margin-bottom: 12px;
   }
   @media (min-width: 641px) and (max-width: 1024px) {
     width: 400px;
+    margin-bottom: 12px;
   }
 `
 export const ContatoLocalizacaoLink = styled.a`
