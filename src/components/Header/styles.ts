@@ -51,13 +51,13 @@ export const HeaderLinkMobile = styled.div`
   display: none;
   @media (max-width: 640px) {
     display: flex;
-    width: 195px;
+    width: 210px;
     align-items: center;
     justify-content: space-between;
   }
   @media (min-width: 641px) and (max-width: 1024px) {
     display: flex;
-    width: 355px;
+    width: 380px;
     height: 44px;
     align-items: center;
     justify-content: space-between;

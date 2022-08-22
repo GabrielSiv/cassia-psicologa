@@ -8,10 +8,18 @@ export const DropDownWrapper = styled.ul`
   .dropdown-main-menu {
     display: none;
   }
-  &:hover .dropdown-main-menu,
+
   &.active .dropdown-main-menu {
     display: block;
     animation: show-up 0.3s forwards;
+  }
+  &.active .menuIcon {
+    animation: menuRotate 0.3s forwards;
+    @keyframes menuRotate {
+      to {
+        transform: rotate(90deg);
+      }
+    }
   }
   @keyframes show-up {
     from {
@@ -26,17 +34,30 @@ export const DropDownWrapper = styled.ul`
 `
 export const DropDownImg = styled.img`
   margin-top: 5px;
-  height: 34px;
-  width: 20px;
+  height: 24px;
+  width: 24px;
 `
 export const DropDownMenuMain = styled.ul`
   position: absolute;
   top: 40px;
   right: 0px;
+
   background: ${getVar("color-white-00")};
   padding: 20px 20px 20px 20px;
-  border-radius: 5px;
+
   box-shadow: 2px 2px 2px ${getVar("color-red-10")};
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    margin-left: 60px;
+    top: -10px;
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid ${getVar("color-white-00")};
+  }
 `
 export const ItemMenu = styled.li`
   :not(:last-child) {
