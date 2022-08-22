@@ -41,7 +41,7 @@ const Header = () => {
         </S.HeaderLinks>
         <S.HeaderMobileWrapper>
           <S.HeaderLinkMobile>
-            <Logo width="57px" height="25px"></Logo>
+            <Logo width="90px" height="60px" logoID={2}></Logo>
             <DropDownMenu></DropDownMenu>
           </S.HeaderLinkMobile>
         </S.HeaderMobileWrapper>

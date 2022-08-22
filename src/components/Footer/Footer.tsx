@@ -54,7 +54,10 @@ const Footer = () => {
               {contatoNavContent.map((item: ContatoNavProps, index: number) => {
                 return (
                   <S.ContatoLocalizacaoItem key={index}>
-                    <S.ContatoLocalizacaoLink href={item.link_contato.url}>
+                    <S.ContatoLocalizacaoLink
+                      href={item.link_contato.url}
+                      target={"__blank"}
+                    >
                       <S.ContatoLocalizacaoItemImg
                         src={item.icone_contato.url}
                         alt={"Contact"}
@@ -78,7 +81,7 @@ const Footer = () => {
               {footerContent.data.texto_mais_informacoes.text}
             </S.MaisInformacoesText>
           </S.MaisInformacoesWrapper>
-          <Logo width="270px" height="137px"></Logo>
+          <Logo logoID={1} width="270px" height="137px"></Logo>
         </S.ContatoMainWrapper>
         <S.FooterLastWrapper>
           <S.FooterLastContent>

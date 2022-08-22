@@ -11,7 +11,7 @@ export const HeaderWrapper = styled.header`
   border-bottom: 1px solid ${getVar("color-white-00")};
   z-index: 10;
   @media screen and (max-width: 1024px) {
-    height: 44px;
+    height: 60px;
     justify-content: center;
   }
 `

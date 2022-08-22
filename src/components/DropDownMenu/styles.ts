@@ -25,14 +25,15 @@ export const DropDownWrapper = styled.ul`
   }
 `
 export const DropDownImg = styled.img`
-  height: 25px;
-  width: 17px;
+  margin-top: 5px;
+  height: 34px;
+  width: 20px;
 `
 export const DropDownMenuMain = styled.ul`
   position: absolute;
-  top: 28px;
-  right: 1px;
-  background: ${getVar("color-red-03")};
+  top: 40px;
+  right: 0px;
+  background: ${getVar("color-white-00")};
   padding: 20px 20px 20px 20px;
   border-radius: 5px;
   box-shadow: 2px 2px 2px ${getVar("color-red-10")};
