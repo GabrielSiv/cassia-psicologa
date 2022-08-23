@@ -23,7 +23,7 @@ export const IntroWrapper = styled.div<IntroProps>`
   }
   @media (min-width: 641px) and (max-width: 1024px) {
     width: 100%;
-    min-height: 580px;
+    min-height: 720px;
     height: 100vh;
   }
 `
@@ -42,8 +42,8 @@ export const IntroMainTitle = styled.h1`
   margin: 120px auto 0 auto;
 
   @media screen and (max-width: 640px) {
-    font-size: ${getVar("font-size-xl")};
-    margin: 60px auto 0 auto;
+    font-size: ${getVar("font-size-xxl")};
+    margin: 0 auto 0 auto;
   }
   @media (min-width: 641px) and (max-width: 1024px) {
     font-size: ${getVar("font-size-uul")};
@@ -58,19 +58,19 @@ export const IntroSubtitle = styled.h2`
   color: ${getVar("color-white-00")};
   line-height: ${getVar("line-height-xl")};
   text-align: center;
-  margin: 36px auto 0 auto;
+  margin: 42px auto 0 auto;
   width: 491px;
   @media screen and (max-width: 640px) {
-    font-size: ${getVar("font-size-sm")};
-    line-height: ${getVar("line-height-sm")};
-    width: 179px;
-    margin: 0 auto;
-  }
-  @media (min-width: 641px) and (max-width: 1024px) {
     font-size: ${getVar("font-size-lg")};
     line-height: ${getVar("line-height-lg")};
     width: 300px;
     margin: 24px auto 0 auto;
+  }
+  @media (min-width: 641px) and (max-width: 1024px) {
+    font-size: ${getVar("font-size-xl")};
+    line-height: ${getVar("line-height-xl")};
+    width: 420px;
+    margin: 36px auto 0 auto;
   }
 `
 export const Separador = styled.div`
@@ -81,12 +81,12 @@ export const Separador = styled.div`
   border: 1px solid ${getVar("color-white-00")};
   margin: 56px auto;
   @media screen and (max-width: 640px) {
-    height: 32px;
-    margin: 36px auto;
+    height: 56px;
+    margin: 48px auto;
   }
   @media (min-width: 641px) and (max-width: 1024px) {
-    height: 72px;
-    margin: 48px auto;
+    height: 84px;
+    margin: 72px auto;
   }
 `
 
@@ -123,16 +123,17 @@ export const IntroNavButton = styled.a`
   width: 195px;
   height: 54px;
   border: 2px solid ${getVar("color-white-00")};
-  @media (min-width: 641px) and (max-width: 1024px) {
+  @media screen and (max-width: 640px) {
     font-size: ${getVar("font-size-us")};
-    width: 133px;
-    height: 34px;
-    padding-top: 8px;
+
+    width: 164px;
+    height: 42px;
+    padding-top: 12px;
   }
-  @media screen and (max-width: 1024px) {
+  @media (min-width: 641px) and (max-width: 1024px) {
     font-size: ${getVar("font-size-xxs")};
-    width: 200px;
-    height: 50px;
-    padding-top: 16px;
+    width: 224px;
+    height: 57px;
+    padding-top: 19px;
   }
 `
