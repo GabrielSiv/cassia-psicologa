@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import getVar from "../../utils/getVar"
 
-export const ContatoWrapper = styled.div`
+export const ContatoWrapper = styled.section`
   padding-top: 64px;
   width: 100%;
   background-color: ${getVar("color-red-01")};

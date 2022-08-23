@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import getVar from "../../utils/getVar"
 
-export const ContactWrapper = styled.div`
+export const ContactWrapper = styled.section`
   width: 100%;
   display: flex;
   flex-wrap: wrap;

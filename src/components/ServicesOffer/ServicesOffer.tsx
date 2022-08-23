@@ -38,7 +38,13 @@ const ServicesOffer = () => {
 
   return (
     <>
-      <S.ServicesOfferWrapper id="SERVIÇOS">
+      <S.ServicesOfferWrapper
+        id="SERVIÇOS"
+        data-sal="fade"
+        data-sal-delay="50"
+        data-sal-duration="400"
+        data-sal-easing="ease-in-quad"
+      >
         <S.ServicesOfferContent>
           <S.ServicesOfferTitle>
             {servicosContent.data.titulo.text}

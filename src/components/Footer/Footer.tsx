@@ -43,7 +43,12 @@ const Footer = () => {
 
   return (
     <>
-      <S.ContatoWrapper>
+      <S.ContatoWrapper
+        data-sal="fade"
+        data-sal-delay="50"
+        data-sal-duration="400"
+        data-sal-easing="ease-in-quad"
+      >
         <S.ContatoMainWrapper>
           <S.ContatoLocalizacaoWrapper>
             <S.ContatoLocalizacaoTitle>

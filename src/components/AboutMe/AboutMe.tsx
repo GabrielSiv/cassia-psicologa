@@ -38,7 +38,13 @@ const AboutMe = () => {
 
   return (
     <>
-      <S.AboutMeWrapper id="SOBRE">
+      <S.AboutMeWrapper
+        id="SOBRE"
+        data-sal="fade"
+        data-sal-delay="50"
+        data-sal-duration="400"
+        data-sal-easing="ease-in-quad"
+      >
         <S.AboutMeContentWrapper>
           <S.AboutMeTextWrapper>
             <S.AboutMeTitle>{aboutMeContent.data.titulo.text}</S.AboutMeTitle>
