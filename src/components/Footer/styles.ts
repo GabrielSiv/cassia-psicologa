@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import getVar from "../../utils/getVar"
 
-export const ContatoWrapper = styled.section`
+export const ContatoWrapper = styled.footer`
   padding-top: 64px;
   width: 100%;
   background-color: ${getVar("color-red-01")};
@@ -94,11 +94,11 @@ export const ContatoLocalizacaoItem = styled.li`
   align-content: center;
   @media (max-width: 640px) {
     width: 268px;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
   }
   @media (min-width: 641px) and (max-width: 1024px) {
     width: 400px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 `
 export const ContatoLocalizacaoLink = styled.a`

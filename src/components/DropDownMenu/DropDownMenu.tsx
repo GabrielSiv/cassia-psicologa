@@ -60,6 +60,7 @@ const DropDownMenu = () => {
                       href={`${item.href}`}
                       onClick={e => {
                         e.preventDefault()
+                        handleClick()
                         scrollTo(`#${item.name}`)
                       }}
                     >
