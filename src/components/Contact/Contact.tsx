@@ -38,7 +38,13 @@ const Contact = () => {
 
   return (
     <>
-      <S.ContactWrapper id="CONTATO">
+      <S.ContactWrapper
+        id="CONTATO"
+        data-sal="fade"
+        data-sal-delay="50"
+        data-sal-duration="400"
+        data-sal-easing="ease-in-quad"
+      >
         <S.ContactTitle>
           {contactContent.data.contato_main_title.text}
         </S.ContactTitle>

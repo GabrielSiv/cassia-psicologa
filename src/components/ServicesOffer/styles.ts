@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import getVar from "../../utils/getVar"
 
-export const ServicesOfferWrapper = styled.div`
+export const ServicesOfferWrapper = styled.section`
   width: 100%;
   padding-top: 164px;
   padding-bottom: 164px;
