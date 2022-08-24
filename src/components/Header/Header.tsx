@@ -4,7 +4,7 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 import * as S from "./styles"
 import type { HeaderLinksProps } from "./interfaces"
 import Logo from "../Logo"
-import DropDownMenu from "../DropDownMenu"
+const DropDownMenu = React.lazy(() => import("../DropDownMenu"))
 
 const Header = () => {
   const headerLinks: Array<HeaderLinksProps> = [

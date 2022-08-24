@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import getVar from "../../utils/getVar"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export const ServicesOfferWrapper = styled.section`
   width: 100%;
@@ -145,7 +146,7 @@ export const ServiceImageWrapper = styled.div`
     margin-left: -1px;
   }
 `
-export const ServiceImage = styled.img`
+export const ServiceImage = styled(GatsbyImage)`
   height: 283px;
   width: 496px;
   object-fit: cover;

@@ -11,7 +11,12 @@ export type ContactProps = {
     }
     social_medias: {
       social_media_icon: {
-        url: string
+        gatsByImageData: {
+          height: number
+          images: []
+          layout: string
+          width: number
+        }
       }
       social_media_name: {
         text: string

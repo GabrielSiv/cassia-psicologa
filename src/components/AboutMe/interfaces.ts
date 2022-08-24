@@ -1,7 +1,12 @@
 export type AboutMeQueryProps = {
   data: {
     sobre_mim_foto: {
-      url: string
+      gatsByImageData: {
+        height: number
+        images: []
+        layout: string
+        width: number
+      }
     }
     titulo: {
       text: string
