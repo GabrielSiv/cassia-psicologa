@@ -5,10 +5,9 @@ interface IntroProps {
   href: string
 }
 
-export const IntroWrapper = styled.div<IntroProps>`
+export const IntroWrapper = styled.div`
   display: flex;
   align-items: center;
-  background-image: url(${props => props.href});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

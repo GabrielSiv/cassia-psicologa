@@ -1,7 +1,12 @@
 export type IntroQueryProps = {
   data: {
     head_bg: {
-      url: string
+      gatsByImageData: {
+        height: number
+        images: []
+        layout: string
+        width: number
+      }
     }
     titulo_principal: {
       text: string
