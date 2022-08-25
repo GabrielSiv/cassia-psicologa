@@ -39,7 +39,7 @@ export const ContatoLocalizacaoWrapper = styled.nav`
     width: 350px;
   }
 `
-export const ContatoLocalizacaoTitle = styled.h3`
+export const ContatoLocalizacaoTitle = styled.h1`
   font-family: ${getVar("font-family-secondary")};
   font-size: ${getVar("font-size-lg")};
   color: ${getVar("color-red-10")};

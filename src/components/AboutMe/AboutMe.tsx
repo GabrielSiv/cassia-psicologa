@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 import { AboutMeQueryProps, TrabalhosNotoriosProps } from "./interfaces"
 import * as S from "./styles"
 
@@ -9,7 +10,7 @@ const AboutMe = () => {
       prismicSobreMim {
         data {
           sobre_mim_foto {
-            url
+            gatsbyImageData
           }
           titulo {
             text
@@ -35,6 +36,7 @@ const AboutMe = () => {
   const aboutMeContent: AboutMeQueryProps = AboutMeQuery.prismicSobreMim
   const trabalhosNotorios: Array<TrabalhosNotoriosProps> =
     AboutMeQuery.prismicSobreMim.data.trabalhos_notorios
+  const image = getImage(aboutMeContent.data.sobre_mim_foto)
 
   return (
     <>
@@ -72,17 +74,14 @@ const AboutMe = () => {
             </S.AboutMeNotoriousWrapper>
           </S.AboutMeTextWrapper>
           <S.AboutMeImageWrapper>
-            <S.AboutMeImage
-              src={`${aboutMeContent.data.sobre_mim_foto.url}`}
-              alt={"CassiaLace"}
-            />
+            <S.AboutMeImage image={image} alt={"CassiaLacê"} />
           </S.AboutMeImageWrapper>
         </S.AboutMeContentWrapper>
         <S.AboutMeMobileWrapper>
           <S.AboutMeFirst>
             <S.AboutMeImageWrapperMob>
               <S.AboutMeImageMob
-                src={`${aboutMeContent.data.sobre_mim_foto.url}`}
+                image={image}
                 alt={"CassiaLace"}
               ></S.AboutMeImageMob>
             </S.AboutMeImageWrapperMob>

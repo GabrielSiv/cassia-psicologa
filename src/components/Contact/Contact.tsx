@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 import type { ContactProps, SocialMediaProps } from "./interface"
 import * as S from "./styles"
 
@@ -19,7 +20,7 @@ const Contact = () => {
           }
           social_medias {
             social_media_icon {
-              url
+              gatsbyImageData
             }
             social_media_name {
               text
@@ -66,7 +67,7 @@ const Contact = () => {
                     target="__blank"
                   >
                     <S.SocialMediaItemImg
-                      src={item.social_media_icon.url}
+                      image={getImage(item.social_media_icon)}
                       alt={"Contact"}
                     />
 
