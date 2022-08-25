@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import getVar from "../../utils/getVar"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 interface Display {
   displayType: string
@@ -155,7 +154,7 @@ export const AboutMeImageWrapper = styled.div`
   height: 857px;
   width: 420px;
 `
-export const AboutMeImage = styled(GatsbyImage)`
+export const AboutMeImage = styled.img`
   height: 857px;
   width: 420px;
   object-fit: cover;
@@ -193,7 +192,7 @@ export const AboutMeImageWrapperMob = styled.div`
     width: 176px;
   }
 `
-export const AboutMeImageMob = styled(GatsbyImage)`
+export const AboutMeImageMob = styled.img`
   width: 108px;
   height: 220px;
   object-fit: cover;

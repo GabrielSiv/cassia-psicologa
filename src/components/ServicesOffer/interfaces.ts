@@ -11,12 +11,7 @@ export type ServicesQueryType = {
     }
     servicos: {
       servico_image: {
-        gatsByImageData: {
-          height: number
-          images: []
-          layout: string
-          width: number
-        }
+        url: string
       }
       servico_titulo: {
         text: string
@@ -27,12 +22,7 @@ export type ServicesQueryType = {
 
 export type ServicosPrestadosProps = {
   servico_image: {
-    gatsByImageData: {
-      height: number
-      images: []
-      layout: string
-      width: number
-    }
+    url: string
   }
   servico_titulo: {
     text: string
