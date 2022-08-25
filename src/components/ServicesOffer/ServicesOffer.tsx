@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { getImage } from "gatsby-plugin-image"
 
 import * as S from "./styles"
 import type { ServicesQueryType, ServicosPrestadosProps } from "./interfaces"
@@ -21,7 +20,7 @@ const ServicesOffer = () => {
           }
           servicos {
             servico_image {
-              gatsbyImageData
+              url
             }
             servico_titulo {
               text
@@ -36,13 +35,6 @@ const ServicesOffer = () => {
     ServicosQuery.prismicServicoPrestado
   const servicosList: Array<ServicosPrestadosProps> =
     ServicosQuery.prismicServicoPrestado.data.servicos
-
-  React.useEffect(() => {
-    console.log(
-      typeof ServicosQuery.prismicServicoPrestado.data.servicos[0].servico_image
-        .gatsbyImageData
-    )
-  }, [])
 
   return (
     <>
@@ -73,7 +65,7 @@ const ServicesOffer = () => {
                   <S.ServiceImageWrapper>
                     <S.ServiceImage
                       alt="Services"
-                      image={getImage(item.servico_image)}
+                      src={`${item.servico_image.url}`}
                     ></S.ServiceImage>
                   </S.ServiceImageWrapper>
                 </S.ServiceWrapper>

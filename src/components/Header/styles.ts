@@ -29,13 +29,11 @@ export const HeaderLinks = styled.ul`
   }
 `
 export const HeaderLink = styled.li`
-  a {
-    display: flex;
-    font-family: ${getVar("font-family-primary")};
-    font-size: ${getVar("font-size-xs")};
-    color: ${getVar("color-white-00")};
-    font-weight: ${getVar("font-weight-regular")};
-  }
+  display: flex;
+  font-family: ${getVar("font-family-primary")};
+  font-size: ${getVar("font-size-xs")};
+  color: ${getVar("color-white-00")};
+  font-weight: ${getVar("font-weight-regular")};
 `
 export const HeaderMobileWrapper = styled.div`
   display: flex;
