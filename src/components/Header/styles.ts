@@ -34,6 +34,7 @@ export const HeaderLink = styled.li`
   font-size: ${getVar("font-size-xs")};
   color: ${getVar("color-white-00")};
   font-weight: ${getVar("font-weight-regular")};
+  cursor: pointer;
 `
 export const HeaderMobileWrapper = styled.div`
   display: flex;
