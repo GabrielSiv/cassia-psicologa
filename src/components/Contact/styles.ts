@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import getVar from "../../utils/getVar"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export const ContactWrapper = styled.section`
   width: 100%;
@@ -129,7 +130,7 @@ export const SocialMediaItemLink = styled.a`
   align-items: center;
   text-decoration: none;
 `
-export const SocialMediaItemImg = styled.img`
+export const SocialMediaItemImg = styled(GatsbyImage)`
   height: 45px;
   width: 45px;
   @media (max-width: 640px) {
