@@ -1,7 +1,7 @@
 import React from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import * as S from "./styles"
-import Teste from "../../images/menu-outlined.png"
+import Favicon from "../../images/menu-outlined.png"
 import type { HeaderLinksProps } from "../Header/interfaces"
 
 const DropDownMenu = () => {
@@ -11,21 +11,25 @@ const DropDownMenu = () => {
     { name: "SERVIÇOS", href: "/servicos" },
   ]
 
+  const [isBrowser, setIsBrowser] = React.useState(false)
+
+  React.useEffect(() => {
+    setIsBrowser(true)
+  }, [])
+
   const display = React.useRef(null)
   const wrapperRef = React.useRef(null)
 
   function useOutsideAlerter(ref) {
-    React.useEffect(() => {
-      function handleClickOutside(event) {
-        if (ref.current && !ref.current.contains(event.target)) {
-          display.current.classList.remove("active")
-        }
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        display.current.classList.remove("active")
       }
-      document.addEventListener("mousedown", handleClickOutside)
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside)
-      }
-    }, [ref])
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
   }
 
   function handleClick() {
@@ -36,7 +40,7 @@ const DropDownMenu = () => {
     display.current.classList.add("active")
   }
 
-  useOutsideAlerter(display)
+  isBrowser ? useOutsideAlerter(display) : null
   return (
     <>
       <S.DropDownWrapper ref={display}>
@@ -44,7 +48,7 @@ const DropDownMenu = () => {
           <S.DropDownImg
             className="menuIcon"
             alt="Drop Down Menu"
-            src={Teste}
+            src={Favicon}
             onMouseDown={() => {
               handleClick()
             }}

@@ -52,7 +52,6 @@ const Intro = () => {
               {IntroContent.data.sub_titulos[1].sub_titulo.text}
             </S.IntroCRP>
             <S.IntroNavButton
-              href=""
               onClick={e => {
                 e.preventDefault()
                 scrollTo("#CONTATO")
