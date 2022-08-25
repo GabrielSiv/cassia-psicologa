@@ -31,7 +31,14 @@ const Intro = () => {
 
   return (
     <>
-      <S.IntroWrapper href={IntroContent.data.head_bg.url} id="INICIO">
+      <S.IntroWrapper
+        data-sal="fade"
+        data-sal-delay="50"
+        data-sal-duration="400"
+        data-sal-easing="ease-in-quad"
+        href={IntroContent.data.head_bg.url}
+        id="INICIO"
+      >
         <S.IntroContent>
           <S.IntroMainTitle>
             {IntroContent.data.titulo_principal.text}
