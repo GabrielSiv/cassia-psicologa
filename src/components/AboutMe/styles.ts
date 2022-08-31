@@ -103,18 +103,29 @@ export const AboutMeNotoriousItem = styled.div`
   justify-content: flex-start;
   margin-top: 4px;
 
-  border-right: 2px solid ${getVar("color-red-01")};
+  &:not(:last-child) {
+    border-right: 2px solid ${getVar("color-red-01")};
+  }
+  &:not(:first-child) {
+    padding-left: 8px;
+  }
   &:not(:last-child) {
     margin-right: 8px;
   }
-  @media (min-width: 641px) and (max-width: 1024px) {
+  @media (max-width: 640px) {
     &:not(:nth-child(odd)) {
+      border-right: none;
+    }
+  }
+  @media (min-width: 641px) and (max-width: 1024px) {
+    &:not(:first-child) {
       margin-left: 12px;
     }
   }
+
   @media (max-width: 1024px) {
+    width: 110px;
     height: 91px;
-    margin-left: 12px;
   }
 `
 export const AboutMeNotoriousTitle = styled.h3`
@@ -129,6 +140,7 @@ export const AboutMeNotoriousTitle = styled.h3`
 
   @media (max-width: 1024px) {
     font-size: ${getVar("font-size-xxs")};
+    width: 90px;
     &::first-letter {
       font-size: ${getVar("font-size-md")};
     }
@@ -137,7 +149,7 @@ export const AboutMeNotoriousTitle = styled.h3`
 
 export const AboutMeNotoriousParagraph = styled.p`
   font-family: ${getVar("font-family-primary")};
-  font-size: ${getVar("font-size-sm")};
+  font-size: ${getVar("font-size-xxs")};
   line-height: ${getVar("line-height-sm")};
   color: ${getVar("color-red-09")};
   font-weight: ${getVar("font-weight-bold")};
@@ -146,7 +158,7 @@ export const AboutMeNotoriousParagraph = styled.p`
   @media (max-width: 1024px) {
     font-size: ${getVar("font-size-xus")};
     line-height: ${getVar("line-height-xxs")};
-    width: 75px;
+    width: 90px;
   }
 `
 
