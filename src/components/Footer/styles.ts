@@ -118,12 +118,6 @@ export const ContatoLocalizacaoItemText = styled.p`
   font-weight: ${getVar("font-weight-bold")};
   align-self: center;
   margin-left: 16px;
-  @media (max-width: 640px) {
-    font-weight: ${getVar("font-weight-regular")};
-  }
-  @media (min-width: 641px) and (max-width: 1024px) {
-    font-weight: ${getVar("font-weight-regular")};
-  }
 `
 export const MaisInformacoesWrapper = styled.div`
   width: 350px;
@@ -151,6 +145,9 @@ export const MaisInformacoesText = styled.p`
   color: ${getVar("color-red-10")};
   width: 250px;
   margin-top: 24px;
+  @media (min-width: 641px) and (max-width: 1024px) {
+    width: auto;
+  }
 `
 export const FooterLastWrapper = styled.div`
   height: 70px;
