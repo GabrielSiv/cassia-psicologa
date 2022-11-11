@@ -6,10 +6,11 @@ export type IntroQueryProps = {
     titulo_principal: {
       text: string
     }
-    sub_titulos: {
-      sub_titulo: {
-        text: string
-      }
+    sub_titulo: {
+      text: string
+    }
+    texto_auxiliar: {
+      text: string
     }
   }
 }
