@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import ReactHtmlParser from "react-html-parser"
 
 import { IntroQueryProps } from "./interfaces"
 import NavButton from "../../baseComponents/NavButton"
@@ -15,13 +16,13 @@ const Intro = () => {
             url
           }
           titulo_principal {
-            text
+            html
           }
           sub_titulo {
-            text
+            html
           }
           texto_auxiliar {
-            text
+            html
           }
         }
       }
@@ -41,13 +42,13 @@ const Intro = () => {
         id="INICIO"
       >
         <S.IntroContent>
-          <S.IntroMainTitle>
-            {IntroContent.data.titulo_principal.text}
-          </S.IntroMainTitle>
-          <S.IntroSubtitle>{IntroContent.data.sub_titulo.text}</S.IntroSubtitle>
+          {ReactHtmlParser(IntroContent.data.titulo_principal.html)}
+
+          {ReactHtmlParser(IntroContent.data.sub_titulo.html)}
+
           <S.Separador />
           <S.IntroLastContentWrapper>
-            <S.IntroCRP>{IntroContent.data.texto_auxiliar.text}</S.IntroCRP>
+            {ReactHtmlParser(IntroContent.data.texto_auxiliar.html)}
             <NavButton content="AGENDAMENTO" link="#CONTATO"></NavButton>
           </S.IntroLastContentWrapper>
         </S.IntroContent>

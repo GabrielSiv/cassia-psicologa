@@ -33,46 +33,47 @@ export const IntroContent = styled.div`
   flex-direction: column;
   width: 100%;
   height: auto;
-`
-export const IntroMainTitle = styled.h1`
-  display: block;
-  font-family: ${getVar("font-family-secondary")};
-  font-size: ${getVar("font-size-uul")};
-  color: ${getVar(`color-white-00`)};
-  margin: 120px auto 0 auto;
-
-  @media screen and (max-width: 640px) {
-    font-size: ${getVar("font-size-xxl")};
-    margin: 0 auto 0 auto;
-  }
-  @media (min-width: 641px) and (max-width: 1024px) {
+  h1 {
+    display: block;
+    font-family: ${getVar("font-family-secondary")};
     font-size: ${getVar("font-size-uul")};
-    margin: 0 auto 0 auto;
+    color: ${getVar(`color-white-00`)};
+    margin: 120px auto 0 auto;
+
+    @media screen and (max-width: 640px) {
+      font-size: ${getVar("font-size-xxl")};
+      margin: 0 auto 0 auto;
+    }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      font-size: ${getVar("font-size-uul")};
+      margin: 0 auto 0 auto;
+    }
+  }
+
+  h2 {
+    display: block;
+    font-family: ${getVar("font-family-secondary")};
+    font-size: ${getVar("font-size-xl")};
+    color: ${getVar("color-white-00")};
+    line-height: ${getVar("line-height-xl")};
+    text-align: center;
+    margin: 42px auto 0 auto;
+    width: 491px;
+    @media screen and (max-width: 640px) {
+      font-size: ${getVar("font-size-lg")};
+      line-height: ${getVar("line-height-lg")};
+      width: 300px;
+      margin: 24px auto 0 auto;
+    }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      font-size: ${getVar("font-size-xl")};
+      line-height: ${getVar("line-height-xl")};
+      width: 420px;
+      margin: 36px auto 0 auto;
+    }
   }
 `
 
-export const IntroSubtitle = styled.h2`
-  display: block;
-  font-family: ${getVar("font-family-secondary")};
-  font-size: ${getVar("font-size-xl")};
-  color: ${getVar("color-white-00")};
-  line-height: ${getVar("line-height-xl")};
-  text-align: center;
-  margin: 42px auto 0 auto;
-  width: 491px;
-  @media screen and (max-width: 640px) {
-    font-size: ${getVar("font-size-lg")};
-    line-height: ${getVar("line-height-lg")};
-    width: 300px;
-    margin: 24px auto 0 auto;
-  }
-  @media (min-width: 641px) and (max-width: 1024px) {
-    font-size: ${getVar("font-size-xl")};
-    line-height: ${getVar("line-height-xl")};
-    width: 420px;
-    margin: 36px auto 0 auto;
-  }
-`
 export const Separador = styled.div`
   width: 1px;
   height: 81px;
@@ -100,15 +101,19 @@ export const IntroLastContentWrapper = styled.div`
     justify-content: center;
     width: 100%;
   }
-`
-
-export const IntroCRP = styled.span`
-  font-family: ${getVar("font-family-primary")};
-  font-size: ${getVar("font-size-xxs")};
-  line-height: ${getVar("line-height-sm")};
-  color: ${getVar("color-white-00")};
-  width: 148px;
-  @media screen and (max-width: 1024px) {
-    display: none;
+  p {
+    font-family: ${getVar("font-family-primary")};
+    font-size: ${getVar("font-size-xxs")};
+    line-height: ${getVar("line-height-sm")};
+    color: ${getVar("color-white-00")};
+    width: 148px;
+    strong {
+      font-weight: ${getVar("font-weight-bold")};
+    }
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
   }
 `
+
+export const IntroCRP = styled.span``
