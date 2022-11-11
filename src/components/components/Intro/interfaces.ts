@@ -4,13 +4,13 @@ export type IntroQueryProps = {
       url: string
     }
     titulo_principal: {
-      text: string
+      html: string
     }
     sub_titulo: {
-      text: string
+      html: string
     }
     texto_auxiliar: {
-      text: string
+      html: string
     }
   }
 }

@@ -8,6 +8,7 @@ interface Display {
 export const AboutMeWrapper = styled.section`
   width: 100%;
 `
+
 export const AboutMeContentWrapper = styled.div`
   width: 1024px;
   margin: 0 auto;
@@ -18,67 +19,38 @@ export const AboutMeContentWrapper = styled.div`
     display: none;
   }
 `
+
 export const AboutMeTextWrapper = styled.div`
   width: 600px;
   justify-content: flex-start;
   align-items: flex-start;
-`
-
-export const AboutMeSubTitle = styled.h2`
-  font-family: ${getVar("font-family-secondary")};
-  font-size: ${getVar("font-size-uul")};
-  color: ${getVar("color-red-10")};
-  margin-bottom: 24px;
-  margin-left: -4px;
-  @media (max-width: 640px) {
-    font-size: ${getVar("font-size-xl")};
-    width: 160px;
-    margin: 0px;
+  h4 {
+    font-family: ${getVar("font-family-secondary")};
+    font-size: ${getVar("font-size-md")};
+    line-height: ${getVar("line-height-md")};
+    color: ${getVar("color-red-10")};
+    margin-bottom: 24px;
   }
-  @media (min-width: 641px) and (max-width: 1024px) {
-    font-size: ${getVar("font-size-xxl")};
-    width: 185px;
-    margin: 0px;
+  h3 {
+    font-family: ${getVar("font-family-secondary")};
+    font-size: ${getVar("font-size-uul")};
+    color: ${getVar("color-red-10")};
+    margin-bottom: 24px;
+    margin-left: -4px;
   }
-`
-
-export const AboutMeTitle = styled.h1`
-  font-family: ${getVar("font-family-secondary")};
-  font-size: ${getVar("font-size-md")};
-  line-height: ${getVar("line-height-md")};
-  color: ${getVar("color-red-10")};
-  margin-bottom: 24px;
-
-  @media (max-width: 640px) {
+  p {
+    font-family: ${getVar("font-family-primary")};
     font-size: ${getVar("font-size-xxs")};
-    line-height: ${getVar("line-height-xs")};
-    margin-bottom: 8px;
-    width: 130px;
-  }
-
-  @media (min-width: 641px) and (max-width: 1024px) {
-    font-size: ${getVar("font-size-sm")};
-    line-height: ${getVar("line-height-xs")};
-    margin-bottom: 16px;
-    width: 160px;
+    line-height: ${getVar("line-height-sm")};
+    color: ${getVar("color-red-10")};
+    width: 560px;
+    strong {
+      font-weight: ${getVar("font-weight-bold")};
+    }
+    margin-bottom: 12px;
   }
 `
 
-export const AboutMeParagraph = styled.p`
-  font-family: ${getVar("font-family-primary")};
-  font-size: ${getVar("font-size-xxs")};
-  line-height: ${getVar("line-height-sm")};
-  color: ${getVar("color-red-10")};
-  width: 560px;
-  @media (max-width: 640px) {
-    width: 315px;
-    margin: 40px auto 30px auto;
-  }
-  @media (min-width: 641px) and (max-width: 1024px) {
-    width: 600px;
-    margin: 40px auto 30px auto;
-  }
-`
 export const AboutMeNotoriousWrapper = styled.div`
   width: 550px;
   height: auto;
@@ -88,14 +60,15 @@ export const AboutMeNotoriousWrapper = styled.div`
   @media (max-width: 640px) {
     width: 320px;
     height: auto;
-    margin: 0 auto;
+    margin: 24px auto 0 auto;
   }
   @media (min-width: 641px) and (max-width: 1024px) {
     width: 600px;
     height: auto;
-    margin: 0 auto;
+    margin: 28px auto 0 auto;
   }
 `
+
 export const AboutMeNotoriousItem = styled.div`
   width: 130px;
   height: 95px;
@@ -128,7 +101,8 @@ export const AboutMeNotoriousItem = styled.div`
     height: 91px;
   }
 `
-export const AboutMeNotoriousTitle = styled.h3`
+
+export const AboutMeNotoriousTitle = styled.h5`
   font-family: ${getVar("font-family-primary")};
   font-size: ${getVar("font-size-sm")};
   line-height: ${getVar("line-height-sm")};
@@ -148,17 +122,20 @@ export const AboutMeNotoriousTitle = styled.h3`
 `
 
 export const AboutMeNotoriousParagraph = styled.p`
-  font-family: ${getVar("font-family-primary")};
-  font-size: ${getVar("font-size-xxs")};
-  line-height: ${getVar("line-height-sm")};
-  color: ${getVar("color-red-09")};
-  font-weight: ${getVar("font-weight-bold")};
-  margin-top: 16px;
-  width: 112px;
-  @media (max-width: 1024px) {
-    font-size: ${getVar("font-size-xus")};
-    line-height: ${getVar("line-height-xxs")};
-    width: 90px;
+  &.notorious {
+    font-family: ${getVar("font-family-primary")};
+    font-size: ${getVar("font-size-xxs")};
+    line-height: ${getVar("line-height-sm")};
+    color: ${getVar("color-red-09")};
+    font-weight: ${getVar("font-weight-bold")};
+    margin: 0;
+    margin-top: 16px;
+    width: 120px;
+    @media (max-width: 1024px) {
+      font-size: ${getVar("font-size-xus")};
+      line-height: ${getVar("line-height-xxs")};
+      width: 90px;
+    }
   }
 `
 
@@ -166,6 +143,7 @@ export const AboutMeImageWrapper = styled.div`
   height: 857px;
   width: 420px;
 `
+
 export const AboutMeImage = styled.img`
   height: 857px;
   width: 420px;
@@ -176,6 +154,24 @@ export const AboutMeImage = styled.img`
 export const AboutMeMobileWrapper = styled.div`
   display: none;
   width: 100%;
+
+  p {
+    font-family: ${getVar("font-family-primary")};
+    font-size: ${getVar("font-size-xxs")};
+    line-height: ${getVar("line-height-sm")};
+    color: ${getVar("color-red-10")};
+    strong {
+      font-weight: ${getVar("font-weight-bold")};
+    }
+    @media (max-width: 640px) {
+      width: 315px;
+      margin: 0 auto 12px auto;
+    }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      margin: 0 auto 12px auto;
+      width: 600px;
+    }
+  }
   @media (max-width: 1024px) {
     display: block;
   }
@@ -188,13 +184,16 @@ export const AboutMeFirst = styled.div`
   justify-content: center;
   @media (max-width: 640px) {
     height: 220px;
+    margin: 0px auto 40px auto;
   }
   @media (min-width: 641px) and (max-width: 1024px) {
+    margin: 0px auto 40px auto;
     justify-content: flex-start;
     height: 360px;
     width: 600px;
   }
 `
+
 export const AboutMeImageWrapperMob = styled.div`
   width: 108px;
   height: 220px;
@@ -204,6 +203,7 @@ export const AboutMeImageWrapperMob = styled.div`
     width: 176px;
   }
 `
+
 export const AboutMeImageMob = styled.img`
   width: 108px;
   height: 220px;
@@ -214,9 +214,38 @@ export const AboutMeImageMob = styled.img`
     width: 176px;
   }
 `
+
 export const AboutMeFirstTextWrapper = styled.div`
   padding-top: 76px;
   width: 160px;
+
+  h3,
+  h4 {
+    font-family: ${getVar("font-family-secondary")};
+    color: ${getVar("color-red-10")};
+  }
+  h3 {
+    margin: 0px;
+    @media (max-width: 640px) {
+      font-size: ${getVar("font-size-xl")};
+      width: 160px;
+    }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      font-size: ${getVar("font-size-xxl")};
+      width: 185px;
+    }
+  }
+  h4 {
+    margin-bottom: 24px;
+    font-size: ${getVar("font-size-sm")};
+    width: 170px;
+    @media (max-width: 640px) {
+      font-size: ${getVar("font-size-xxs")};
+      line-height: ${getVar("line-height-xs")};
+      margin-bottom: 8px;
+      width: 130px;
+    }
+  }
   @media (min-width: 641px) and (max-width: 1024px) {
     width: 360px;
     display: flex;
