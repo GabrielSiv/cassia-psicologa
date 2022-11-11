@@ -65,7 +65,7 @@ const ServicesOffer = () => {
                   </S.ServiceTitleWrapper>
                   <S.ServiceImageWrapper>
                     <S.ServiceImage
-                      alt="Services"
+                      alt="Servicess"
                       src={`${item.servico_image.url}`}
                     ></S.ServiceImage>
                   </S.ServiceImageWrapper>
