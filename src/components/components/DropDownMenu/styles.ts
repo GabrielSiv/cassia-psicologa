@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import getVar from "../../utils/getVar"
+import getVar from "../../../utils/getVar"
 
 export const DropDownWrapper = styled.ul`
   position: relative;

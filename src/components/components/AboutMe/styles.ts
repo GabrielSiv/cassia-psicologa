@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import getVar from "../../utils/getVar"
+import getVar from "../../../utils/getVar"
 
 interface Display {
   displayType: string

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import getVar from "../../utils/getVar"
+import getVar from "../../../utils/getVar"
 
 interface IntroProps {
   href: string
@@ -126,7 +126,6 @@ export const IntroNavButton = styled.button`
   cursor: pointer;
   @media screen and (max-width: 640px) {
     font-size: ${getVar("font-size-us")};
-
     width: 164px;
     height: 42px;
   }
@@ -134,5 +133,10 @@ export const IntroNavButton = styled.button`
     font-size: ${getVar("font-size-xxs")};
     width: 224px;
     height: 57px;
+  }
+  :hover {
+    transition: all 0.3s;
+    background-color: #fff;
+    color: ${getVar("color-red-06")};
   }
 `

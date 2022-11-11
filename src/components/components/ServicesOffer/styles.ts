@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import getVar from "../../utils/getVar"
+import getVar from "../../../utils/getVar"
 
 export const ServicesOfferWrapper = styled.section`
   width: 100%;

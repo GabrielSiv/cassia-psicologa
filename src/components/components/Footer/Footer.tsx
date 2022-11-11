@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import type { FooterQueryProps, ContatoNavProps } from "./interfaces"
-import Logo from "../../components/Logo"
+import Logo from "../../baseComponents/Logo"
 import * as S from "./styles"
 
 const Footer = () => {
