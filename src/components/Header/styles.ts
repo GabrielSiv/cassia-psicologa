@@ -29,12 +29,27 @@ export const HeaderLinks = styled.ul`
   }
 `
 export const HeaderLink = styled.li`
-  display: flex;
   font-family: ${getVar("font-family-primary")};
   font-size: ${getVar("font-size-xs")};
   color: ${getVar("color-white-00")};
   font-weight: ${getVar("font-weight-regular")};
   cursor: pointer;
+  ::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    position: relative;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    top: 2px;
+  }
+  :hover::after {
+    width: 100%;
+    left: 0;
+  }
 `
 export const HeaderMobileWrapper = styled.div`
   display: flex;
