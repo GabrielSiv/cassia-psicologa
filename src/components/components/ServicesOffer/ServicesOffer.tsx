@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import ReactHtmlParser from "react-html-parser"
 
 import * as S from "./styles"
 import type { ServicesQueryType, ServicosPrestadosProps } from "./interfaces"
@@ -11,12 +12,15 @@ const ServicesOffer = () => {
         data {
           titulo {
             text
+            html
           }
           servico_prestado {
             text
+            html
           }
           list_title {
             text
+            html
           }
           servicos {
             servico_image {
@@ -24,6 +28,7 @@ const ServicesOffer = () => {
             }
             servico_titulo {
               text
+              html
             }
           }
         }
@@ -35,6 +40,7 @@ const ServicesOffer = () => {
     ServicosQuery.prismicServicoPrestado
   const servicosList: Array<ServicosPrestadosProps> =
     ServicosQuery.prismicServicoPrestado.data.servicos
+  console.log(servicosContent.data.list_title.html)
 
   return (
     <>
@@ -46,21 +52,16 @@ const ServicesOffer = () => {
         data-sal-easing="ease-in-quad"
       >
         <S.ServicesOfferContent>
-          <S.ServicesOfferTitle>
-            {servicosContent.data.titulo.text}
-          </S.ServicesOfferTitle>
-          <S.ServicesOfferParagraph>
-            {servicosContent.data.servico_prestado.text}
-          </S.ServicesOfferParagraph>
-          <S.ServicesListTitle>
-            {servicosContent.data.list_title.text}
-          </S.ServicesListTitle>
+          {ReactHtmlParser(servicosContent.data.titulo.html)}
+          {ReactHtmlParser(servicosContent.data.servico_prestado.html)}
+          {ReactHtmlParser(servicosContent.data.list_title.html)}
+
           <S.ServiceItemsWrapper>
             {servicosList.map((item: ServicosPrestadosProps, index: number) => {
               return (
                 <S.ServiceWrapper key={index}>
                   <S.ServiceTitleWrapper>
-                    <S.ServiceTitle>{item.servico_titulo.text}</S.ServiceTitle>
+                    {ReactHtmlParser(item.servico_titulo.html)}
                   </S.ServiceTitleWrapper>
                   <S.ServiceImageWrapper>
                     <S.ServiceImage
