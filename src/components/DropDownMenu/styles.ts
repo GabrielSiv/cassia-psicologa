@@ -40,12 +40,11 @@ export const DropDownImg = styled.img`
 export const DropDownMenuMain = styled.ul`
   position: absolute;
   top: 44px;
-  right: 0px;
+  right: 2px;
 
   background: ${getVar("color-white-00")};
-  padding: 20px 20px 20px 20px;
+  padding: 20px 30px 20px 30px;
 
-  box-shadow: 2px 2px 2px ${getVar("color-red-10")};
   &:before {
     content: "";
     display: block;
