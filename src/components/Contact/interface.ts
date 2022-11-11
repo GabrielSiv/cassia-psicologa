@@ -16,9 +16,12 @@ export type ContactProps = {
       social_media_name: {
         text: string
       }
-      social_media_link: {
-        text: string
+      perfil_link: {
+        url: string
       }
+    }
+    hover_socialmedia: {
+      url: string
     }
   }
 }
@@ -30,7 +33,7 @@ export type SocialMediaProps = {
   social_media_name: {
     text: string
   }
-  social_media_link: {
-    text: string
+  perfil_link: {
+    url: string
   }
 }

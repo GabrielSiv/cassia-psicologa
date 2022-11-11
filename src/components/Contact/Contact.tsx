@@ -25,9 +25,12 @@ const Contact = () => {
             social_media_name {
               text
             }
-            social_media_link {
-              text
+            perfil_link {
+              url
             }
+          }
+          hover_socialmedia {
+            url
           }
         }
       }
@@ -63,8 +66,9 @@ const Contact = () => {
               return (
                 <S.SocialMediaItem key={index}>
                   <S.SocialMediaItemLink
-                    href={`https://${item.social_media_link.text}`}
+                    href={item.perfil_link.url}
                     target="__blank"
+                    url={`${contactContent.data.hover_socialmedia.url}`}
                   >
                     <S.SocialMediaItemImg
                       src={item.social_media_icon.url}
