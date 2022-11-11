@@ -96,6 +96,7 @@ export const SocialMediaItemsWrapper = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin: 0 64px 64px 64px;
+
   @media (max-width: 640px) {
     margin: 0 0 40px 40px;
   }
@@ -128,6 +129,17 @@ export const SocialMediaItemLink = styled.a`
   display: flex;
   align-items: center;
   text-decoration: none;
+  ::after {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  :hover::after {
+    opacity: 1;
+  }
 `
 export const SocialMediaItemImg = styled.img`
   height: 45px;
