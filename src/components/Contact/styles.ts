@@ -125,7 +125,7 @@ export const SocialMediaItem = styled.li`
     }
   }
 `
-export const SocialMediaItemLink = styled.a`
+export const SocialMediaItemLink = styled.a<{ url: string }>`
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -133,6 +133,7 @@ export const SocialMediaItemLink = styled.a`
     display: flex;
     align-items: center;
     margin-left: 24px;
+    content: url(${props => props.url});
     opacity: 0;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
