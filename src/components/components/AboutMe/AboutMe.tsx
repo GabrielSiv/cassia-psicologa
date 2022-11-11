@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import ReactHtmlParser from "react-html-parser"
 
 import { AboutMeQueryProps, TrabalhosNotoriosProps } from "./interfaces"
 import * as S from "./styles"
@@ -12,14 +13,14 @@ const AboutMe = () => {
           sobre_mim_foto {
             url
           }
-          titulo {
-            text
+          main_tittle {
+            html
           }
-          sub_titulo {
-            text
+          sub_tittle {
+            html
           }
           sobre_mim {
-            text
+            html
           }
           trabalhos_notorios {
             trabalhos_notorios_titulo {
@@ -48,13 +49,9 @@ const AboutMe = () => {
       >
         <S.AboutMeContentWrapper>
           <S.AboutMeTextWrapper>
-            <S.AboutMeTitle>{aboutMeContent.data.titulo.text}</S.AboutMeTitle>
-            <S.AboutMeSubTitle>
-              {aboutMeContent.data.sub_titulo.text}
-            </S.AboutMeSubTitle>
-            <S.AboutMeParagraph>
-              {aboutMeContent.data.sobre_mim.text}
-            </S.AboutMeParagraph>
+            {ReactHtmlParser(aboutMeContent.data.main_tittle.html)}
+            {ReactHtmlParser(aboutMeContent.data.sub_tittle.html)}
+            {ReactHtmlParser(aboutMeContent.data.sobre_mim.html)}
             <S.AboutMeNotoriousWrapper>
               {trabalhosNotorios.map(
                 (item: TrabalhosNotoriosProps, index: number) => {
@@ -63,7 +60,7 @@ const AboutMe = () => {
                       <S.AboutMeNotoriousTitle>
                         {item.trabalhos_notorios_titulo.text}
                       </S.AboutMeNotoriousTitle>
-                      <S.AboutMeNotoriousParagraph>
+                      <S.AboutMeNotoriousParagraph className="notorious">
                         {item.trabalhos_notorios_descricao.text}
                       </S.AboutMeNotoriousParagraph>
                     </S.AboutMeNotoriousItem>
@@ -88,15 +85,11 @@ const AboutMe = () => {
               ></S.AboutMeImageMob>
             </S.AboutMeImageWrapperMob>
             <S.AboutMeFirstTextWrapper>
-              <S.AboutMeTitle>{aboutMeContent.data.titulo.text}</S.AboutMeTitle>
-              <S.AboutMeSubTitle>
-                {aboutMeContent.data.sub_titulo.text}
-              </S.AboutMeSubTitle>
+              {ReactHtmlParser(aboutMeContent.data.main_tittle.html)}
+              {ReactHtmlParser(aboutMeContent.data.sub_tittle.html)}
             </S.AboutMeFirstTextWrapper>
           </S.AboutMeFirst>
-          <S.AboutMeParagraph>
-            {aboutMeContent.data.sobre_mim.text}
-          </S.AboutMeParagraph>
+          {ReactHtmlParser(aboutMeContent.data.sobre_mim.html)}
           <S.AboutMeNotoriousWrapper>
             {trabalhosNotorios.map(
               (item: TrabalhosNotoriosProps, index: number) => {
@@ -105,7 +98,7 @@ const AboutMe = () => {
                     <S.AboutMeNotoriousTitle>
                       {item.trabalhos_notorios_titulo.text}
                     </S.AboutMeNotoriousTitle>
-                    <S.AboutMeNotoriousParagraph>
+                    <S.AboutMeNotoriousParagraph className="notorious">
                       {item.trabalhos_notorios_descricao.text}
                     </S.AboutMeNotoriousParagraph>
                   </S.AboutMeNotoriousItem>

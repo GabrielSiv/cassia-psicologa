@@ -3,14 +3,14 @@ export type AboutMeQueryProps = {
     sobre_mim_foto: {
       url: string
     }
-    titulo: {
-      text: string
+    main_tittle: {
+      html: string
     }
-    sub_titulo: {
-      text: string
+    sub_tittle: {
+      html: string
     }
     sobre_mim: {
-      text: string
+      html: string
     }
     trabalhos_notorios: {
       trabalhos_notorios_titulo: {
