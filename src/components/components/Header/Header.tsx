@@ -3,7 +3,7 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 
 import * as S from "./styles"
 import type { HeaderLinksProps } from "./interfaces"
-import Logo from "../Logo"
+import Logo from "../../baseComponents/Logo"
 import DropDownMenu from "../DropDownMenu"
 
 const Header = () => {

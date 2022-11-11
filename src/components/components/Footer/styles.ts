@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import getVar from "../../utils/getVar"
+import getVar from "../../../utils/getVar"
 
 export const ContatoWrapper = styled.footer`
   padding-top: 64px;

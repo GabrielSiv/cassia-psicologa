@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
 import { IntroQueryProps } from "./interfaces"
+import NavButton from "../../baseComponents/NavButton"
 
 import * as S from "./styles"
 
@@ -51,14 +52,7 @@ const Intro = () => {
             <S.IntroCRP>
               {IntroContent.data.sub_titulos[1].sub_titulo.text}
             </S.IntroCRP>
-            <S.IntroNavButton
-              onClick={e => {
-                e.preventDefault()
-                scrollTo("#CONTATO")
-              }}
-            >
-              AGENDAMENTO
-            </S.IntroNavButton>
+            <NavButton content="AGENDAMENTO" link="#CONTATO"></NavButton>
           </S.IntroLastContentWrapper>
         </S.IntroContent>
       </S.IntroWrapper>

@@ -1,7 +1,7 @@
 import React from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import * as S from "./styles"
-import Favicon from "../../images/menu-outlined.png"
+import Favicon from "../../../images/menu-outlined.png"
 import type { HeaderLinksProps } from "../Header/interfaces"
 
 const DropDownMenu = () => {
