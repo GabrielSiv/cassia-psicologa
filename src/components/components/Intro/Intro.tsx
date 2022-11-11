@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import scrollTo from "gatsby-plugin-smoothscroll"
 
 import { IntroQueryProps } from "./interfaces"
 import NavButton from "../../baseComponents/NavButton"
@@ -18,10 +17,11 @@ const Intro = () => {
           titulo_principal {
             text
           }
-          sub_titulos {
-            sub_titulo {
-              text
-            }
+          sub_titulo {
+            text
+          }
+          texto_auxiliar {
+            text
           }
         }
       }
@@ -44,14 +44,10 @@ const Intro = () => {
           <S.IntroMainTitle>
             {IntroContent.data.titulo_principal.text}
           </S.IntroMainTitle>
-          <S.IntroSubtitle>
-            {IntroContent.data.sub_titulos[0].sub_titulo.text}
-          </S.IntroSubtitle>
+          <S.IntroSubtitle>{IntroContent.data.sub_titulo.text}</S.IntroSubtitle>
           <S.Separador />
           <S.IntroLastContentWrapper>
-            <S.IntroCRP>
-              {IntroContent.data.sub_titulos[1].sub_titulo.text}
-            </S.IntroCRP>
+            <S.IntroCRP>{IntroContent.data.texto_auxiliar.text}</S.IntroCRP>
             <NavButton content="AGENDAMENTO" link="#CONTATO"></NavButton>
           </S.IntroLastContentWrapper>
         </S.IntroContent>
