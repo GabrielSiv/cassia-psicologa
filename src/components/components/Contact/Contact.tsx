@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import ReactHtmlParser from "react-html-parser"
 
 import type { ContactProps, SocialMediaProps } from "./interface"
 import * as S from "./styles"
@@ -10,20 +11,20 @@ const Contact = () => {
       prismicContato {
         data {
           contato_main_title {
-            text
+            html
           }
           contato_sub_title {
-            text
+            html
           }
           descricao_social_media {
-            text
+            html
           }
           social_medias {
             social_media_icon {
               url
             }
             social_media_name {
-              text
+              html
             }
             perfil_link {
               url
@@ -39,6 +40,7 @@ const Contact = () => {
   const contactContent: ContactProps = ContactQuery.prismicContato
   const socialMediaContent: Array<SocialMediaProps> =
     ContactQuery.prismicContato.data.social_medias
+  console.log(contactContent.data.contato_main_title.html)
 
   return (
     <>
@@ -49,18 +51,15 @@ const Contact = () => {
         data-sal-duration="400"
         data-sal-easing="ease-in-quad"
       >
-        <S.ContactTitle>
-          {contactContent.data.contato_main_title.text}
-        </S.ContactTitle>
+        {ReactHtmlParser(contactContent.data.contato_main_title.html)}
+
         <S.SocialMediaWrapper>
           <S.SocialMediaTitleWrapper>
-            <S.SocialMediaTitle>
-              {contactContent.data.contato_sub_title.text}
-            </S.SocialMediaTitle>
+            {ReactHtmlParser(contactContent.data.contato_sub_title.html)}
           </S.SocialMediaTitleWrapper>
-          <S.SocialMediaParagraph>
-            {contactContent.data.descricao_social_media.text}
-          </S.SocialMediaParagraph>
+
+          {ReactHtmlParser(contactContent.data.descricao_social_media.html)}
+
           <S.SocialMediaItemsWrapper>
             {socialMediaContent.map((item: SocialMediaProps, index: number) => {
               return (
@@ -74,10 +73,7 @@ const Contact = () => {
                       src={item.social_media_icon.url}
                       alt={"Contact"}
                     />
-
-                    <S.SocialMediaItemName>
-                      {item.social_media_name.text}
-                    </S.SocialMediaItemName>
+                    {ReactHtmlParser(item.social_media_name.html)}
                   </S.SocialMediaItemLink>
                 </S.SocialMediaItem>
               )
