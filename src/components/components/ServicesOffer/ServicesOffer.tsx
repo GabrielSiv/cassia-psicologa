@@ -10,24 +10,20 @@ const ServicesOffer = () => {
     query Services {
       prismicServicoPrestado {
         data {
-          titulo {
-            text
+          main_tittle {
             html
           }
-          servico_prestado {
-            text
+          auxiliar_text {
             html
           }
-          list_title {
-            text
+          list_tittle {
             html
           }
-          servicos {
+          services {
             servico_image {
               url
             }
-            servico_titulo {
-              text
+            srv_tittle {
               html
             }
           }
@@ -39,8 +35,7 @@ const ServicesOffer = () => {
   const servicosContent: ServicesQueryType =
     ServicosQuery.prismicServicoPrestado
   const servicosList: Array<ServicosPrestadosProps> =
-    ServicosQuery.prismicServicoPrestado.data.servicos
-  console.log(servicosContent.data.list_title.html)
+    ServicosQuery.prismicServicoPrestado.data.services
 
   return (
     <>
@@ -52,16 +47,16 @@ const ServicesOffer = () => {
         data-sal-easing="ease-in-quad"
       >
         <S.ServicesOfferContent>
-          {ReactHtmlParser(servicosContent.data.titulo.html)}
-          {ReactHtmlParser(servicosContent.data.servico_prestado.html)}
-          {ReactHtmlParser(servicosContent.data.list_title.html)}
+          {ReactHtmlParser(servicosContent.data.main_tittle.html)}
+          {ReactHtmlParser(servicosContent.data.auxiliar_text.html)}
+          {ReactHtmlParser(servicosContent.data.list_tittle.html)}
 
           <S.ServiceItemsWrapper>
             {servicosList.map((item: ServicosPrestadosProps, index: number) => {
               return (
                 <S.ServiceWrapper key={index}>
                   <S.ServiceTitleWrapper>
-                    {ReactHtmlParser(item.servico_titulo.html)}
+                    {ReactHtmlParser(item.srv_tittle.html)}
                   </S.ServiceTitleWrapper>
                   <S.ServiceImageWrapper>
                     <S.ServiceImage
