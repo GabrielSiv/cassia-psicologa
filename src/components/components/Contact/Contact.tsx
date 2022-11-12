@@ -40,7 +40,6 @@ const Contact = () => {
   const contactContent: ContactProps = ContactQuery.prismicContato
   const socialMediaContent: Array<SocialMediaProps> =
     ContactQuery.prismicContato.data.social_medias
-  console.log(contactContent.data.contato_main_title.html)
 
   return (
     <>

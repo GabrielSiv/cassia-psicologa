@@ -38,19 +38,20 @@ export const ContatoLocalizacaoWrapper = styled.nav`
   @media (min-width: 641px) and (max-width: 1024px) {
     width: 350px;
   }
-`
-export const ContatoLocalizacaoTitle = styled.h1`
-  font-family: ${getVar("font-family-secondary")};
-  font-size: ${getVar("font-size-lg")};
-  color: ${getVar("color-red-10")};
-  height: 40px;
-  @media (max-width: 640px) {
-    font-size: ${getVar("font-size-md")};
-  }
-  @media (min-width: 641px) and (max-width: 1024px) {
+  h3 {
+    font-family: ${getVar("font-family-secondary")};
     font-size: ${getVar("font-size-lg")};
+    color: ${getVar("color-red-10")};
+    height: 40px;
+    @media (max-width: 640px) {
+      font-size: ${getVar("font-size-md")};
+    }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      font-size: ${getVar("font-size-lg")};
+    }
   }
 `
+
 export const ContatoMaisInformacoesSeperador = styled.div`
   background-color: ${getVar("color-red-10")};
   width: 2px;
@@ -105,20 +106,21 @@ export const ContatoLocalizacaoLink = styled.a`
   display: flex;
   justify-content: flex-start;
   flex-wrap: nowrap;
+  p {
+    font-family: ${getVar("font-family-primary")};
+    font-size: ${getVar("font-size-xxs")};
+    text-decoration: none;
+    color: ${getVar("color-red-10")};
+    font-weight: ${getVar("font-weight-bold")};
+    align-self: center;
+    margin-left: 16px;
+  }
 `
 export const ContatoLocalizacaoItemImg = styled.img`
   height: 29px;
   width: 29px;
 `
-export const ContatoLocalizacaoItemText = styled.p`
-  font-family: ${getVar("font-family-primary")};
-  font-size: ${getVar("font-size-xxs")};
-  text-decoration: none;
-  color: ${getVar("color-red-10")};
-  font-weight: ${getVar("font-weight-bold")};
-  align-self: center;
-  margin-left: 16px;
-`
+
 export const MaisInformacoesWrapper = styled.div`
   width: 350px;
   display: flex;
@@ -137,18 +139,39 @@ export const MaisInformacoesWrapper = styled.div`
     margin-top: 64px;
     margin-bottom: 64px;
   }
-`
-export const MaisInformacoesText = styled.p`
-  font-family: ${getVar("font-family-primary")};
-  font-size: ${getVar("font-size-xxs")};
-  line-height: ${getVar("line-height-sm")};
-  color: ${getVar("color-red-10")};
-  width: 250px;
-  margin-top: 24px;
-  @media (min-width: 641px) and (max-width: 1024px) {
-    width: auto;
+  h3 {
+    font-family: ${getVar("font-family-secondary")};
+    font-size: ${getVar("font-size-lg")};
+    color: ${getVar("color-red-10")};
+    height: 40px;
+    @media (max-width: 640px) {
+      font-size: ${getVar("font-size-md")};
+    }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      font-size: ${getVar("font-size-lg")};
+    }
+  }
+  > p {
+    font-family: ${getVar("font-family-primary")};
+    font-size: ${getVar("font-size-xxs")};
+    line-height: ${getVar("line-height-sm")};
+    color: ${getVar("color-red-10")};
+    width: 250px;
+    margin-top: 24px;
+    @media (min-width: 641px) and (max-width: 1024px) {
+      width: auto;
+    }
+    strong,
+    a {
+      font-weight: ${getVar("font-weight-bold")};
+    }
+    a {
+      text-decoration: underline;
+      color: ${getVar("color-red-10")};
+    }
   }
 `
+
 export const FooterLastWrapper = styled.div`
   height: 70px;
   width: 100%;
@@ -166,10 +189,10 @@ export const FooterLastContent = styled.div`
   @media (min-width: 641px) and (max-width: 1024px) {
     width: 600px;
   }
-`
-export const FooterLastContentParagraph = styled.p`
-  font-family: ${getVar("font-family-primary")};
-  color: ${getVar("color-white-00")};
-  font-size: ${getVar("font-size-xxs")};
-  align-self: center;
+  > p {
+    font-family: ${getVar("font-family-primary")};
+    color: ${getVar("color-white-00")};
+    font-size: ${getVar("font-size-xxs")};
+    align-self: center;
+  }
 `
