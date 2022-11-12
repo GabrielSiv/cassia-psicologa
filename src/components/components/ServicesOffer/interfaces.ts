@@ -1,20 +1,20 @@
 export type ServicesQueryType = {
   data: {
-    titulo: {
-      text: string
+    main_tittle: {
+      html: string
     }
-    servico_prestado: {
-      text: string
+    auxiliar_text: {
+      html: string
     }
-    list_title: {
-      text: string
+    list_tittle: {
+      html: string
     }
-    servicos: {
+    services: {
       servico_image: {
         url: string
       }
-      servico_titulo: {
-        text: string
+      srv_tittle: {
+        html: string
       }
     }
   }
@@ -24,7 +24,7 @@ export type ServicosPrestadosProps = {
   servico_image: {
     url: string
   }
-  servico_titulo: {
-    text: string
+  srv_tittle: {
+    html: string
   }
 }

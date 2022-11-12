@@ -1,10 +1,6 @@
 import styled from "styled-components"
 import getVar from "../../../utils/getVar"
 
-interface Display {
-  displayType: string
-}
-
 export const AboutMeWrapper = styled.section`
   width: 100%;
 `

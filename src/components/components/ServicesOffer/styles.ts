@@ -28,48 +28,52 @@ export const ServicesOfferContent = styled.div`
   @media (min-width: 641px) and (max-width: 1024px) {
     width: 600px;
   }
-`
-export const ServicesOfferTitle = styled.h1`
-  font-family: ${getVar("font-family-secondary")};
-  font-size: ${getVar("font-size-uul")};
-  color: ${getVar("color-red-10")};
-  margin-bottom: 24px;
-  @media screen and (max-width: 640px) {
-    font-size: ${getVar("font-size-xl")};
-    line-height: ${getVar("line-height-xl")};
+
+  h3 {
+    font-family: ${getVar("font-family-secondary")};
+    font-size: ${getVar("font-size-uul")};
+    color: ${getVar("color-red-10")};
+    margin-bottom: 24px;
+    @media screen and (max-width: 640px) {
+      font-size: ${getVar("font-size-xl")};
+      line-height: ${getVar("line-height-xl")};
+    }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      font-size: ${getVar("font-size-xxl")};
+      margin-bottom: 36px;
+    }
   }
-  @media (min-width: 641px) and (max-width: 1024px) {
-    font-size: ${getVar("font-size-xxl")};
-    margin-bottom: 36px;
+  h4 {
+    margin: 53px 0;
+    font-family: ${getVar("font-family-secondary")};
+    font-size: ${getVar("font-size-md")};
+    line-height: ${getVar("line-height-md")};
+    color: ${getVar("color-red-10")};
+    @media screen and (max-width: 1024px) {
+      font-size: ${getVar("font-size-sm")};
+      line-height: ${getVar("line-height-sm")};
+      margin: 32px 0 0 0;
+    }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      font-size: ${getVar("font-size-sm")};
+      line-height: ${getVar("line-height-sm")};
+      margin: 32px 0 0 0;
+    }
   }
-`
-export const ServicesOfferParagraph = styled.p`
-  font-family: ${getVar("font-family-primary")};
-  font-size: ${getVar("font-size-xxs")};
-  line-height: ${getVar("line-height-sm")};
-  color: ${getVar("color-red-10")};
-  margin-top: 24px;
-  width: 796px;
-  @media screen and (max-width: 1024px) {
-    line-height: ${getVar("line-height-xxs")};
-    width: 100%;
-  }
-`
-export const ServicesListTitle = styled.h2`
-  margin: 53px 0;
-  font-family: ${getVar("font-family-secondary")};
-  font-size: ${getVar("font-size-md")};
-  line-height: ${getVar("line-height-md")};
-  color: ${getVar("color-red-10")};
-  @media screen and (max-width: 1024px) {
-    font-size: ${getVar("font-size-sm")};
+  p {
+    font-family: ${getVar("font-family-primary")};
+    font-size: ${getVar("font-size-xxs")};
     line-height: ${getVar("line-height-sm")};
-    margin: 32px 0 0 0;
-  }
-  @media (min-width: 641px) and (max-width: 1024px) {
-    font-size: ${getVar("font-size-sm")};
-    line-height: ${getVar("line-height-sm")};
-    margin: 32px 0 0 0;
+    color: ${getVar("color-red-10")};
+    margin-top: 24px;
+    width: 796px;
+    @media screen and (max-width: 1024px) {
+      line-height: ${getVar("line-height-xxs")};
+      width: 100%;
+    }
+    strong {
+      font-weight: ${getVar("font-weight-bold")};
+    }
   }
 `
 
@@ -118,15 +122,15 @@ export const ServiceTitleWrapper = styled.div`
     width: 278px;
     height: 41px;
   }
-`
-export const ServiceTitle = styled.h3`
-  font-family: ${getVar("font-family-secondary")};
-  font-size: ${getVar("font-size-md")};
-  line-height: ${getVar("line-height-md")};
-  color: ${getVar("color-white-00")};
-  margin: 0 auto;
-  @media screen and (max-width: 1024px) {
-    font-size: ${getVar("font-size-xxs")};
+  h5 {
+    font-family: ${getVar("font-family-secondary")};
+    font-size: ${getVar("font-size-md")};
+    line-height: ${getVar("line-height-md")};
+    color: ${getVar("color-white-00")};
+    margin: 0 auto;
+    @media screen and (max-width: 1024px) {
+      font-size: ${getVar("font-size-xxs")};
+    }
   }
 `
 export const ServiceImageWrapper = styled.div`
