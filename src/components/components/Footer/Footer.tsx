@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import ReactHtmlParser from "react-html-parser"
 
 import type { FooterQueryProps, ContatoNavProps } from "./interfaces"
 import Logo from "../../baseComponents/Logo"
@@ -12,6 +13,7 @@ const Footer = () => {
         data {
           contato_localizacao {
             text
+            html
           }
           contato_nav {
             icone_contato {
@@ -19,6 +21,7 @@ const Footer = () => {
             }
             texto_contato {
               text
+              html
             }
             link_contato {
               url
@@ -26,12 +29,15 @@ const Footer = () => {
           }
           mais_informacoes {
             text
+            html
           }
           texto_mais_informacoes {
             text
+            html
           }
           texto_rodape {
             text
+            html
           }
         }
       }
@@ -51,9 +57,7 @@ const Footer = () => {
       >
         <S.ContatoMainWrapper>
           <S.ContatoLocalizacaoWrapper>
-            <S.ContatoLocalizacaoTitle>
-              {footerContent.data.contato_localizacao.text}
-            </S.ContatoLocalizacaoTitle>
+            {ReactHtmlParser(footerContent.data.contato_localizacao.html)}
             <S.ContatoLocalizacaoSeparador />
             <S.ContatoLocalizacaoItemList>
               {contatoNavContent.map((item: ContatoNavProps, index: number) => {
@@ -67,9 +71,7 @@ const Footer = () => {
                         src={item.icone_contato.url}
                         alt={"Contact"}
                       />
-                      <S.ContatoLocalizacaoItemText>
-                        {item.texto_contato.text}
-                      </S.ContatoLocalizacaoItemText>
+                      {ReactHtmlParser(item.texto_contato.html)}
                     </S.ContatoLocalizacaoLink>
                   </S.ContatoLocalizacaoItem>
                 )
@@ -78,21 +80,15 @@ const Footer = () => {
           </S.ContatoLocalizacaoWrapper>
           <S.ContatoMaisInformacoesSeperador />
           <S.MaisInformacoesWrapper>
-            <S.ContatoLocalizacaoTitle>
-              {footerContent.data.mais_informacoes.text}
-            </S.ContatoLocalizacaoTitle>
+            {ReactHtmlParser(footerContent.data.mais_informacoes.html)}
             <S.ContatoLocalizacaoSeparador />
-            <S.MaisInformacoesText>
-              {footerContent.data.texto_mais_informacoes.text}
-            </S.MaisInformacoesText>
+            {ReactHtmlParser(footerContent.data.texto_mais_informacoes.html)}
           </S.MaisInformacoesWrapper>
           <Logo logoID={1} width="270px" height="137px"></Logo>
         </S.ContatoMainWrapper>
         <S.FooterLastWrapper>
           <S.FooterLastContent>
-            <S.FooterLastContentParagraph>
-              {footerContent.data.texto_rodape.text}
-            </S.FooterLastContentParagraph>
+            {ReactHtmlParser(footerContent.data.texto_rodape.html)}
           </S.FooterLastContent>
         </S.FooterLastWrapper>
       </S.ContatoWrapper>

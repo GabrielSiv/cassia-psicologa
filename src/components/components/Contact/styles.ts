@@ -16,21 +16,21 @@ export const ContactWrapper = styled.section`
     margin-top: 84px;
     padding-bottom: 84px;
   }
-`
-export const ContactTitle = styled.h1`
-  font-family: ${getVar("font-family-secondary")};
-  font-size: ${getVar("font-size-uul")};
-  color: ${getVar("color-red-10")};
-  width: 100%;
-  text-align: center;
-  margin-bottom: 80px;
-  @media (max-width: 640px) {
-    font-size: ${getVar("font-size-xl")};
-    margin-bottom: 44px;
-  }
-  @media (min-width: 641px) and (max-width: 1024px) {
-    font-size: ${getVar("font-size-xxl")};
-    margin-bottom: 64px;
+  h3 {
+    font-family: ${getVar("font-family-secondary")};
+    font-size: ${getVar("font-size-uul")};
+    color: ${getVar("color-red-10")};
+    width: 100%;
+    text-align: center;
+    margin-bottom: 80px;
+    @media (max-width: 640px) {
+      font-size: ${getVar("font-size-xl")};
+      margin-bottom: 44px;
+    }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      font-size: ${getVar("font-size-xxl")};
+      margin-bottom: 64px;
+    }
   }
 `
 
@@ -42,6 +42,22 @@ export const SocialMediaWrapper = styled.div`
   }
   @media (min-width: 641px) and (max-width: 1024px) {
     width: 600px;
+  }
+  > p {
+    font-family: ${getVar("font-family-primary")};
+    font-size: ${getVar("font-size-xxs")};
+    line-height: ${getVar("line-height-sm")};
+    color: ${getVar("color-red-10")};
+    margin: 64px 64px 44px 64px;
+    @media (max-width: 640px) {
+      margin: 40px 40px 40px 40px;
+    }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      margin: 48px 48px 48px 48px;
+    }
+    strong {
+      font-weight: ${getVar("font-weight-bold")};
+    }
   }
 `
 
@@ -64,30 +80,17 @@ export const SocialMediaTitleWrapper = styled.div`
     margin-left: -1px;
     margin-top: -1px;
   }
-`
-export const SocialMediaTitle = styled.h1`
-  font-family: ${getVar("font-family-secondary")};
-  font-size: ${getVar("font-size-xl")};
-  line-height: ${getVar("line-height-xl")};
-  color: ${getVar("color-white-00")};
-  @media (max-width: 640px) {
-    font-size: ${getVar("font-size-md")};
-  }
-  @media (min-width: 641px) and (max-width: 1024px) {
-    font-size: ${getVar("font-size-lg")};
-  }
-`
-export const SocialMediaParagraph = styled.p`
-  font-family: ${getVar("font-family-primary")};
-  font-size: ${getVar("font-size-xxs")};
-  line-height: ${getVar("line-height-sm")};
-  color: ${getVar("color-red-10")};
-  margin: 64px 64px 44px 64px;
-  @media (max-width: 640px) {
-    margin: 40px 40px 40px 40px;
-  }
-  @media (min-width: 641px) and (max-width: 1024px) {
-    margin: 48px 48px 48px 48px;
+  h4 {
+    font-family: ${getVar("font-family-secondary")};
+    font-size: ${getVar("font-size-xl")};
+    line-height: ${getVar("line-height-xl")};
+    color: ${getVar("color-white-00")};
+    @media (max-width: 640px) {
+      font-size: ${getVar("font-size-md")};
+    }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      font-size: ${getVar("font-size-lg")};
+    }
   }
 `
 
@@ -141,6 +144,19 @@ export const SocialMediaItemLink = styled.a<{ url: string }>`
   :hover::after {
     opacity: 1;
   }
+  > p {
+    font-family: ${getVar("font-family-primary")};
+    font-size: ${getVar("font-size-sm")};
+    font-weight: ${getVar("font-weight-bold")};
+    color: ${getVar("color-red-10")};
+    margin-left: 13px;
+    @media (max-width: 640px) {
+      font-size: ${getVar("font-size-xxs")};
+    }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      font-size: ${getVar("font-size-xs")};
+    }
+  }
 `
 export const SocialMediaItemImg = styled.img`
   height: 45px;
@@ -152,18 +168,5 @@ export const SocialMediaItemImg = styled.img`
   @media (min-width: 641px) and (max-width: 1024px) {
     height: 32px;
     width: 32px;
-  }
-`
-export const SocialMediaItemName = styled.p`
-  font-family: ${getVar("font-family-primary")};
-  font-size: ${getVar("font-size-sm")};
-  font-weight: ${getVar("font-weight-bold")};
-  color: ${getVar("color-red-10")};
-  margin-left: 13px;
-  @media (max-width: 640px) {
-    font-size: ${getVar("font-size-xxs")};
-  }
-  @media (min-width: 641px) and (max-width: 1024px) {
-    font-size: ${getVar("font-size-xs")};
   }
 `

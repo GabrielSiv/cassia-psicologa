@@ -1,20 +1,20 @@
 export type ContactProps = {
   data: {
     contato_main_title: {
-      text: string
+      html: string
     }
     contato_sub_title: {
-      text: string
+      html: string
     }
     descricao_social_media: {
-      text: string
+      html: string
     }
     social_medias: {
       social_media_icon: {
         url: string
       }
       social_media_name: {
-        text: string
+        html: string
       }
       perfil_link: {
         url: string
@@ -31,7 +31,7 @@ export type SocialMediaProps = {
     url: string
   }
   social_media_name: {
-    text: string
+    html: string
   }
   perfil_link: {
     url: string
