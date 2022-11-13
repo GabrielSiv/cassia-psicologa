@@ -16,7 +16,19 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       }
-    },
+    },{
+
+      resolve: `gatsby-plugin-google-analytics`,
+      
+      options: {
+      
+      trackingId: `<trackingId>`,
+      
+      head: true
+      
+      }
+      
+      },
     {
       
       resolve: `gatsby-plugin-styled-components`,
